@@ -5,7 +5,7 @@ import { MessageCircle } from 'lucide-react';
 
 export default function WhatsAppButton() {
   const whatsappLink =
-    'https://wa.me/918950003299?text=Hello%20I%20want%20to%20inquire%20about%20your%20products';
+    'https://wa.me/918959893299?text=Hello%20I%20want%20to%20inquire%20about%20your%20products';
 
   return (
     <motion.a

@@ -18,7 +18,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     setMounted(true);
     const savedLanguage = localStorage.getItem('language') as Language;
-    if (savedLanguage && ['en', 'hi', 'ar', 'fr'].includes(savedLanguage)) {
+    if (savedLanguage && ['en', 'ar', 'fr', 'es'].includes(savedLanguage)) {
       setLanguageState(savedLanguage);
     }
   }, []);

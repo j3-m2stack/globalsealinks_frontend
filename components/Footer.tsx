@@ -33,7 +33,7 @@ export default function Footer() {
               Global Sea Links
             </h3>
             <p className="text-green-100 leading-relaxed mb-6">
-              Connecting global markets with quality agro products and industrial materials.
+              {t.footerDescription}
             </p>
             <div className="flex items-center space-x-2 text-green-200">
               <Mail className="w-5 h-5" />

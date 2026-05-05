@@ -2,8 +2,10 @@
 
 import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function WhatsAppButton() {
+  const { t } = useLanguage();
   const whatsappLink =
     'https://wa.me/918959893299?text=Hello%20I%20want%20to%20inquire%20about%20your%20products';
 
@@ -38,7 +40,7 @@ export default function WhatsAppButton() {
 
         {/* Tooltip */}
         <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-gray-900 text-white px-4 py-2 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          <span className="text-sm font-medium">Chat with us on WhatsApp</span>
+          <span className="text-sm font-medium">{t.chatOnWhatsApp}</span>
           <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-full border-8 border-transparent border-l-gray-900" />
         </div>
       </motion.div>

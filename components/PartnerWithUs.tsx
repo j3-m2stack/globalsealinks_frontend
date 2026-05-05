@@ -18,18 +18,18 @@ export default function PartnerWithUs() {
   const benefits = [
     {
       icon: Globe2,
-      title: 'Global Network',
-      description: 'Access to 50+ countries',
+      title: t.globalNetwork,
+      description: t.globalNetworkDesc,
     },
     {
       icon: TrendingUp,
-      title: 'Growth Opportunities',
-      description: 'Expand your business reach',
+      title: t.growthOpportunities,
+      description: t.growthOpportunitiesDesc,
     },
     {
       icon: Award,
-      title: 'Quality Assurance',
-      description: 'Certified processes & standards',
+      title: t.qualityAssuranceTitle,
+      description: t.qualityAssuranceDesc,
     },
   ];
 
@@ -80,17 +80,17 @@ export default function PartnerWithUs() {
               className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-100 to-emerald-100 text-green-700 font-semibold px-5 py-2.5 rounded-full border-2 border-green-200/50 shadow-sm"
             >
               <Handshake className="w-5 h-5" />
-              <span>Partnership Opportunities</span>
+              <span>{t.partnershipOpportunities}</span>
             </motion.div>
 
             {/* Heading */}
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-              Partner With Us
+              {t.partnerWithUs}
             </h2>
 
             {/* Description */}
             <p className="text-lg text-gray-700 leading-relaxed">
-              If you are a supplier looking to export to India, we welcome collaboration opportunities. Connect with us to explore long-term business partnerships.
+              {t.partnerDescription}
             </p>
 
             {/* Benefits Grid */}
@@ -129,7 +129,7 @@ export default function PartnerWithUs() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white rounded-full font-semibold text-lg hover:from-green-700 hover:via-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
               >
-                <span>Connect With Us</span>
+                <span>{t.connectWithUs}</span>
                 <ArrowRight className="w-5 h-5" />
               </a>
             </motion.div>
@@ -166,7 +166,7 @@ export default function PartnerWithUs() {
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-gray-900">500+</div>
-                  <div className="text-sm text-gray-600">Active Partners</div>
+                  <div className="text-sm text-gray-600">{t.activePartners}</div>
                 </div>
               </div>
             </motion.div>

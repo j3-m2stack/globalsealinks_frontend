@@ -62,7 +62,7 @@ export default function Imports() {
         >
           <div className="inline-flex items-center bg-white/70 border border-amber-200 rounded-full px-4 py-2 mb-5">
             <span className="text-gray-800 text-sm font-semibold">
-              What We Import
+              {t.whatWeImport}
             </span>
           </div>
 

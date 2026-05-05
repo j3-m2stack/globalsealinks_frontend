@@ -29,21 +29,21 @@ export default function Navbar() {
 
   const languages = [
     { code: 'en' as Language, name: 'English', flag: '🇬🇧' },
-    { code: 'hi' as Language, name: 'हिन्दी', flag: '🇮🇳' },
     { code: 'ar' as Language, name: 'العربية', flag: '🇸🇦' },
     { code: 'fr' as Language, name: 'Français', flag: '🇫🇷' },
+    { code: 'es' as Language, name: 'Español', flag: '🇪🇸' },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-4">
+    <nav className="fixed top-0 left-0 right-0 z-50">
       <div
-        className={`max-w-7xl mx-auto transition-all duration-300 rounded-2xl ${
+        className={`transition-all duration-300 ${
           isScrolled
             ? 'bg-white/90 backdrop-blur-xl shadow-2xl shadow-green-500/10'
             : 'bg-white/70 backdrop-blur-md shadow-lg'
         }`}
       >
-        <div className="px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex-shrink-0">

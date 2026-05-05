@@ -68,10 +68,10 @@ export default function About() {
                 <CheckCircle className="w-6 h-6 sm:w-7 sm:h-7 text-green-600 flex-shrink-0" />
                 <div>
                   <h4 className="font-semibold text-gray-900 text-sm sm:text-base">
-                    Trusted Partner
+                    {t.trustedPartner}
                   </h4>
                   <p className="text-xs sm:text-sm text-gray-600">
-                    Serving 50+ countries
+                    {t.servingCountries}
                   </p>
                 </div>
               </div>
@@ -86,13 +86,13 @@ export default function About() {
           >
             <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm">
               <Leaf className="w-4 h-4" />
-              Why Choose Us
+              {t.whyChooseUs}
             </div>
 
             <h2 className={`${dmSerif.className} text-3xl sm:text-4xl lg:text-5xl text-gray-900`}>
-              Delivering Premium Agro Products to{' '}
+              {t.deliveringPremium}{' '}
               <span className="block text-green-700">
-                Global Markets
+                {t.globalMarkets}
               </span>
             </h2>
 

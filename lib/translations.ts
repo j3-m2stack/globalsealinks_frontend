@@ -58,6 +58,8 @@ aboutHeadingLine2: 'Global Markets',
     corianderDesc: 'Coriander seeds are the dried fruits of the Coriandrum sativum plant, known for their mild, sweet, citrusy aroma. Widely used in cooking, spice blends, herbal medicine, and essential oil production.',
     onions: 'Onions',
     onionsDesc: 'Onions are one of the most essential and widely traded agricultural commodities, valued for their strong flavor, long shelf life, and versatility across global cuisines.',
+    maize: 'Maize',
+    maizeDesc: 'Premium quality yellow maize, ideal for animal feed, food processing, and industrial applications.',
     
     // Export Process
     processTitle: 'Our Export Process',
@@ -291,6 +293,8 @@ aboutHeadingLine2: 'الأسواق العالمية',
     corianderDesc: 'بذور الكزبرة هي ثمار مجففة من نبات الكزبرة، معروفة برائحتها الحلوة الخفيفة والحمضية. تستخدم على نطاق واسع في الطهي ومزيج التوابل والطب العشبي وإنتاج الزيوت الأساسية.',
     onions: 'البصل',
     onionsDesc: 'البصل هو واحد من أكثر السلع الزراعية الأساسية والمتداولة على نطاق واسع، ويقدر لنكهته القوية وعمره الطويل على الرف وتنوعه عبر المأكولات العالمية.',
+    maize: 'ذرة',
+    maizeDesc: 'ذرة صفراء عالية الجودة، مثالية لأعلاف الحيوانات ومعالجة الأغذية والتطبيقات الصناعية.',
     
     // Export Process
     processTitle: 'عملية التصدير لدينا',
@@ -524,6 +528,8 @@ aboutHeadingLine2: 'marchés mondiaux',
     corianderDesc: 'Les graines de coriandre sont les fruits séchés de la plante Coriandrum sativum, connues pour leur arôme doux, sucré et citronné. Largement utilisées en cuisine, mélanges d\'épices, médecine à base de plantes et production d\'huiles essentielles.',
     onions: 'Oignons',
     onionsDesc: 'Les oignons sont l\'un des produits agricoles les plus essentiels et les plus échangés, appréciés pour leur saveur forte, leur longue durée de conservation et leur polyvalence dans les cuisines mondiales.',
+    maize: 'Maïs',
+    maizeDesc: 'Maïs jaune de qualité supérieure, idéal pour l\'alimentation animale, la transformation alimentaire et les applications industrielles.',
     
     // Export Process
     processTitle: 'Notre processus d\'exportation',
@@ -758,6 +764,8 @@ aboutHeadingLine2: 'marchés mondiaux',
     corianderDesc: 'Las semillas de cilantro son los frutos secos de la planta Coriandrum sativum, conocidas por su aroma suave, dulce y cítrico. Ampliamente utilizadas en cocina, mezclas de especias, medicina herbal y producción de aceites esenciales.',
     onions: 'Cebollas',
     onionsDesc: 'Las cebollas son uno de los productos agrícolas más esenciales y comercializados, valoradas por su sabor fuerte, larga vida útil y versatilidad en las cocinas globales.',
+    maize: 'Maíz',
+    maizeDesc: 'Maíz amarillo de calidad premium, ideal para alimento animal, procesamiento de alimentos y aplicaciones industriales.',
     
     // Export Process
     processTitle: 'Nuestro proceso de exportación',

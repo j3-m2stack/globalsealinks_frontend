@@ -44,8 +44,8 @@ export default function Products() {
       slug: 'non-basmati-rice',
     },
     {
-      title: t.corn || 'Maize',
-      description: t.cornDesc || 'Premium quality yellow maize, ideal for animal feed, food processing, and industrial applications.',
+      title: t.maize || 'Maize',
+      description: t.maizeDesc || 'Premium quality yellow maize, ideal for animal feed, food processing, and industrial applications.',
       image: '/images/Yellow maize.jpeg',
       slug: 'maize',
     },

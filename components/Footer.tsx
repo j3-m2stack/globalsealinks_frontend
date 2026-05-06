@@ -29,7 +29,7 @@ export default function Footer() {
     { name: t.rice, slug: 'non-basmati-rice' },
     { name: t.soyabean, slug: 'soyabean' },
     { name: t.chickpeas, slug: 'chickpeas' },
-    { name: t.corn || 'Maize', slug: 'maize' },
+    { name: t.maize || 'Maize', slug: 'maize' },
     { name: t.coriander, slug: 'coriander' },
     { name: t.onions, slug: 'onions' },
   ];

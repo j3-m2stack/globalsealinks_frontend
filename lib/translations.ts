@@ -232,10 +232,6 @@ aboutHeadingLine2: 'Global Markets',
     allRightsReserved: 'All rights reserved',
     privacyPolicy: 'Privacy Policy',
     termsOfService: 'Terms of Service',
-    
-    // Additional Products
-    corn: 'Maize',
-    cornDesc: 'Premium quality yellow maize, ideal for animal feed, food processing, and industrial applications.',
   },
   
   ar: {
@@ -469,10 +465,6 @@ aboutHeadingLine2: 'الأسواق العالمية',
     allRightsReserved: 'جميع الحقوق محفوظة',
     privacyPolicy: 'سياسة الخصوصية',
     termsOfService: 'شروط الخدمة',
-    
-    // Additional Products
-    corn: 'ذرة',
-    cornDesc: 'ذرة صفراء عالية الجودة، مثالية لأعلاف الحيوانات ومعالجة الأغذية والتطبيقات الصناعية.',
   },
   
   fr: {
@@ -706,10 +698,6 @@ aboutHeadingLine2: 'marchés mondiaux',
     allRightsReserved: 'Tous droits réservés',
     privacyPolicy: 'Politique de confidentialité',
     termsOfService: 'Conditions d\'utilisation',
-    
-    // Additional Products
-    corn: 'Maïs',
-    cornDesc: 'Maïs jaune de qualité supérieure, idéal pour l\'alimentation animale, la transformation alimentaire et les applications industrielles.',
   },
   
   es: {
@@ -944,9 +932,5 @@ aboutHeadingLine2: 'marchés mondiaux',
     allRightsReserved: 'Todos los derechos reservados',
     privacyPolicy: 'Política de privacidad',
     termsOfService: 'Términos de servicio',
-    
-    // Additional Products
-    corn: 'Maíz',
-    cornDesc: 'Maíz amarillo de calidad premium, ideal para alimento animal, procesamiento de alimentos y aplicaciones industriales.',
   },
 };

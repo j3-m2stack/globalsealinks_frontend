@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useRouter, usePathname } from 'next/navigation';
+import Image from 'next/image';
 import { Menu, X, Globe } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { Language } from '@/lib/translations';
@@ -10,6 +12,8 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showLangMenu, setShowLangMenu] = useState(false);
   const { language, setLanguage, t } = useLanguage();
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,12 +23,18 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false);
+  const navigateToSection = (id: string) => {
+    // If we're on a product detail page, go to home first
+    if (pathname && pathname.startsWith('/products/')) {
+      router.push(`/#${id}`);
+    } else {
+      // We're on home page, just scroll
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
+    setIsOpen(false);
   };
 
   const languages = [
@@ -48,47 +58,54 @@ export default function Navbar() {
             {/* Logo */}
             <div className="flex-shrink-0">
               <button
-                onClick={() => scrollToSection('hero')}
-                className="text-2xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent hover:from-green-700 hover:to-emerald-700 transition-all"
+                onClick={() => navigateToSection('hero')}
+                className="flex items-center hover:opacity-80 transition-opacity"
               >
-                Global Sea Links
+                <Image
+                  src="/logo.png"
+                  alt="Global Sea Links"
+                  width={180}
+                  height={60}
+                  className="h-12 w-auto"
+                  priority
+                />
               </button>
             </div>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-1">
               <button
-                onClick={() => scrollToSection('hero')}
+                onClick={() => navigateToSection('hero')}
                 className="px-4 py-2 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-all font-medium"
               >
                 {t.home}
               </button>
               <button
-                onClick={() => scrollToSection('about')}
+                onClick={() => navigateToSection('about')}
                 className="px-4 py-2 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-all font-medium"
               >
                 {t.about}
               </button>
               <button
-                onClick={() => scrollToSection('products')}
+                onClick={() => navigateToSection('products')}
                 className="px-4 py-2 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-all font-medium"
               >
                 {t.products}
               </button>
               <button
-                onClick={() => scrollToSection('process')}
+                onClick={() => navigateToSection('process')}
                 className="px-4 py-2 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-all font-medium"
               >
-                Process
+                {t.process}
               </button>
               <button
-                onClick={() => scrollToSection('imports')}
+                onClick={() => navigateToSection('imports')}
                 className="px-4 py-2 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-all font-medium"
               >
                 {t.imports}
               </button>
               <button
-                onClick={() => scrollToSection('contact')}
+                onClick={() => navigateToSection('contact')}
                 className="px-4 py-2 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-all font-medium"
               >
                 {t.contact}
@@ -175,37 +192,37 @@ export default function Navbar() {
           <div className="lg:hidden border-t border-gray-100">
             <div className="px-4 py-4 space-y-1">
               <button
-                onClick={() => scrollToSection('hero')}
+                onClick={() => navigateToSection('hero')}
                 className="block w-full text-left text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors font-medium py-3 px-4 rounded-lg"
               >
                 {t.home}
               </button>
               <button
-                onClick={() => scrollToSection('about')}
+                onClick={() => navigateToSection('about')}
                 className="block w-full text-left text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors font-medium py-3 px-4 rounded-lg"
               >
                 {t.about}
               </button>
               <button
-                onClick={() => scrollToSection('products')}
+                onClick={() => navigateToSection('products')}
                 className="block w-full text-left text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors font-medium py-3 px-4 rounded-lg"
               >
                 {t.products}
               </button>
               <button
-                onClick={() => scrollToSection('process')}
+                onClick={() => navigateToSection('process')}
                 className="block w-full text-left text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors font-medium py-3 px-4 rounded-lg"
               >
-                Process
+                {t.process}
               </button>
               <button
-                onClick={() => scrollToSection('imports')}
+                onClick={() => navigateToSection('imports')}
                 className="block w-full text-left text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors font-medium py-3 px-4 rounded-lg"
               >
                 {t.imports}
               </button>
               <button
-                onClick={() => scrollToSection('contact')}
+                onClick={() => navigateToSection('contact')}
                 className="block w-full text-left text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors font-medium py-3 px-4 rounded-lg"
               >
                 {t.contact}

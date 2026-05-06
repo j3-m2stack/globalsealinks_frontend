@@ -12,9 +12,11 @@ export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
-    { url: '/images/hero-1.jpeg', alt: 'Rice Export' },
-    { url: '/images/hero-2.jpeg', alt: 'Wheat Farm' },
-    { url: '/images/hero-3.jpeg', alt: 'Shipping Port' },
+    { url: '/slider/1st image for slide.PNG', alt: 'Agricultural Products' },
+    { url: '/slider/2nd image for slide.PNG', alt: 'Quality Grains' },
+    { url: '/slider/3rd image for slide.PNG', alt: 'Export Excellence' },
+    { url: '/slider/4th image for slide.PNG', alt: 'Global Trade' },
+    { url: '/slider/5th image for slide.PNG', alt: 'Premium Quality' },
   ];
 
   useEffect(() => {
@@ -81,7 +83,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 w-full h-full flex items-center justify-start max-w-7xl mx-auto px-6 lg:px-16">
+      {/* <div className="relative z-20 w-full h-full flex items-center justify-start max-w-7xl mx-auto px-6 lg:px-16">
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
@@ -124,7 +126,7 @@ export default function Hero() {
             </button>
           </div>
         </motion.div>
-      </div>
+      </div> */}
 
       {/* Dots */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-30">

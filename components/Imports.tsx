@@ -14,22 +14,22 @@ export default function Imports() {
     {
       title: t.metalScrap,
       description: t.metalScrapDesc,
-      icon: '⚙️',
+      image: '/imports/Metal scrap .PNG',
     },
     {
       title: t.aluminiumScrap,
       description: t.aluminiumScrapDesc,
-      icon: '🔩',
+      image: '/imports/Aluminium scrap.PNG',
     },
     {
       title: t.copperScrap,
       description: t.copperScrapDesc,
-      icon: '🔧',
+      image: '/imports/Copper scrap.PNG',
     },
     {
       title: t.machinery,
       description: t.machineryDesc,
-      icon: '🏭',
+      image: '/imports/Machinery.jpg',
     },
   ];
 
@@ -83,22 +83,33 @@ export default function Imports() {
               initial={{ opacity: 0, y: 25 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: index * 0.12 }}
-              whileHover={{ y: -8 }}
-              className="bg-white/80 backdrop-blur-md rounded-2xl p-6 shadow-lg border border-amber-100 hover:border-emerald-300 transition-all duration-300"
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="group bg-white/90 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg border border-amber-100 hover:border-emerald-400 hover:shadow-2xl transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center text-2xl shadow-md mb-4">
-                {item.icon}
+              {/* Image Container */}
+              <div className="relative h-48 w-full overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
 
-              <h3 className="text-lg font-bold text-gray-900 mb-2">
-                {item.title}
-              </h3>
+              {/* Content */}
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">
+                  {item.title}
+                </h3>
 
-              <p className="text-sm text-gray-600 leading-relaxed">
-                {item.description}
-              </p>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {item.description}
+                </p>
 
-              <div className="mt-5 h-1 w-16 rounded-full bg-gradient-to-r from-emerald-500 to-green-600" />
+                <div className="mt-5 h-1 w-16 rounded-full bg-gradient-to-r from-emerald-500 to-green-600 group-hover:w-full transition-all duration-300" />
+              </div>
             </motion.div>
           ))}
         </div>

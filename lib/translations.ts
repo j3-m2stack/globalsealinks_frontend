@@ -228,6 +228,14 @@ aboutHeadingLine2: 'Global Markets',
     
     // Footer
     footerDescription: 'Connecting global markets with quality agro products and industrial materials.',
+    connectWithUsSocial: 'Connect with us on social media for updates and news.',
+    allRightsReserved: 'All rights reserved',
+    privacyPolicy: 'Privacy Policy',
+    termsOfService: 'Terms of Service',
+    
+    // Additional Products
+    corn: 'Maize',
+    cornDesc: 'Premium quality yellow maize, ideal for animal feed, food processing, and industrial applications.',
   },
   
   ar: {
@@ -457,6 +465,14 @@ aboutHeadingLine2: 'الأسواق العالمية',
     
     // Footer
     footerDescription: 'ربط الأسواق العالمية بمنتجات زراعية عالية الجودة ومواد صناعية.',
+    connectWithUsSocial: 'تواصل معنا على وسائل التواصل الاجتماعي للحصول على التحديثات والأخبار.',
+    allRightsReserved: 'جميع الحقوق محفوظة',
+    privacyPolicy: 'سياسة الخصوصية',
+    termsOfService: 'شروط الخدمة',
+    
+    // Additional Products
+    corn: 'ذرة',
+    cornDesc: 'ذرة صفراء عالية الجودة، مثالية لأعلاف الحيوانات ومعالجة الأغذية والتطبيقات الصناعية.',
   },
   
   fr: {
@@ -686,6 +702,14 @@ aboutHeadingLine2: 'marchés mondiaux',
     
     // Footer
     footerDescription: 'Connecter les marchés mondiaux avec des produits agricoles de qualité et des matériaux industriels.',
+    connectWithUsSocial: 'Connectez-vous avec nous sur les réseaux sociaux pour les mises à jour et les actualités.',
+    allRightsReserved: 'Tous droits réservés',
+    privacyPolicy: 'Politique de confidentialité',
+    termsOfService: 'Conditions d\'utilisation',
+    
+    // Additional Products
+    corn: 'Maïs',
+    cornDesc: 'Maïs jaune de qualité supérieure, idéal pour l\'alimentation animale, la transformation alimentaire et les applications industrielles.',
   },
   
   es: {
@@ -916,5 +940,13 @@ aboutHeadingLine2: 'marchés mondiaux',
     
     // Footer
     footerDescription: 'Conectando mercados globales con productos agrícolas de calidad y materiales industriales.',
+    connectWithUsSocial: 'Conéctese con nosotros en las redes sociales para actualizaciones y noticias.',
+    allRightsReserved: 'Todos los derechos reservados',
+    privacyPolicy: 'Política de privacidad',
+    termsOfService: 'Términos de servicio',
+    
+    // Additional Products
+    corn: 'Maíz',
+    cornDesc: 'Maíz amarillo de calidad premium, ideal para alimento animal, procesamiento de alimentos y aplicaciones industriales.',
   },
 };

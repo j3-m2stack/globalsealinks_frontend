@@ -16,43 +16,49 @@ export default function Products() {
     {
       title: t.cattleFeed,
       description: t.cattleFeedDesc,
-      image:
-        'https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=1000&auto=format&fit=crop',
+      image: '/images/cattle-feed.png',
       slug: 'cattle-feed',
     },
     {
       title: t.soyabean,
       description: t.soyabeanDesc,
-      image:
-        'https://images.unsplash.com/photo-1639843606783-b2f9c50a7468?q=80&w=773&auto=format&fit=crop',
+      image: '/images/soyabean.png',
       slug: 'soyabean',
     },
     {
       title: t.chickpeas,
       description: t.chickpeasDesc,
-      image:
-        'https://images.unsplash.com/photo-1586277640351-169375cd9cf7?q=80&w=870&auto=format&fit=crop',
+      image: '/images/Chickpeas.jpeg',
       slug: 'chickpeas',
     },
     {
       title: t.rice,
       description: t.riceDesc,
-      image:
-        'https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=1000&auto=format&fit=crop',
+      image: '/images/basmati-rice.PNG',
       slug: 'basmati-rice',
+    },
+    {
+      title: t.rice,
+      description: t.riceDesc,
+      image: '/images/non-basmati-rice.PNG',
+      slug: 'non-basmati-rice',
+    },
+    {
+      title: t.corn || 'Maize',
+      description: t.cornDesc || 'Premium quality yellow maize, ideal for animal feed, food processing, and industrial applications.',
+      image: '/images/Yellow maize.jpeg',
+      slug: 'maize',
     },
     {
       title: t.coriander,
       description: t.corianderDesc,
-      image:
-        'https://images.unsplash.com/photo-1528613526328-8c19bd037322?q=80&w=870&auto=format&fit=crop',
-      slug: 'spices',
+      image: '/images/Coriander seeds.jpeg',
+      slug: 'coriander',
     },
     {
       title: t.onions,
       description: t.onionsDesc,
-      image:
-        'https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?q=80&w=1000&auto=format&fit=crop',
+      image: '/images/onion.png',
       slug: 'onions',
     },
   ];

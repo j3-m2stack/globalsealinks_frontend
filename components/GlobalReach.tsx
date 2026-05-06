@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Globe2 } from 'lucide-react';
+import { Globe2, MapPin, TrendingUp, Users, Package, Award } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 export default function GlobalReach() {
@@ -11,44 +11,91 @@ export default function GlobalReach() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const { t } = useLanguage();
 
-  const continents = [
-    { name: 'Asia', emoji: '🌏', countries: 25 },
-    { name: 'Europe', emoji: '🌍', countries: 12 },
-    { name: 'Africa', emoji: '🌍', countries: 8 },
-    { name: 'Americas', emoji: '🌎', countries: 7 },
+  const stats = [
+    { 
+      icon: MapPin, 
+      number: '50+', 
+      label: 'Countries Served',
+      color: 'text-blue-400'
+    },
+    { 
+      icon: Package, 
+      number: '1000+', 
+      label: 'Successful Shipments',
+      color: 'text-green-400'
+    },
+    { 
+      icon: Users, 
+      number: '500+', 
+      label: 'Happy Clients',
+      color: 'text-purple-400'
+    },
+    { 
+      icon: Award, 
+      number: '100%', 
+      label: 'Quality Assured',
+      color: 'text-yellow-400'
+    },
   ];
 
   return (
     <section
       id="global"
       ref={ref}
-      className="py-24 bg-gradient-to-br from-green-900 via-emerald-800 to-teal-900 relative overflow-hidden"
+      className="py-24 bg-gradient-to-br from-slate-900 via-green-900 to-emerald-900 relative overflow-hidden"
     >
-      {/* Animated Background */}
-      <div className="absolute inset-0 opacity-20">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-full h-full">
+          {[...Array(20)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 bg-green-400 rounded-full"
+              style={{
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                scale: [1, 1.5, 1],
+                opacity: [0.3, 0.8, 0.3],
+              }}
+              transition={{
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+              }}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Gradient Orbs */}
+      <div className="absolute inset-0 overflow-hidden">
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
-            rotate: [0, 90, 0],
+            x: [0, 50, 0],
+            y: [0, 30, 0],
           }}
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: 'linear',
+            ease: 'easeInOut',
           }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-400 rounded-full blur-3xl"
+          className="absolute -top-40 -left-40 w-96 h-96 bg-green-500/20 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
             scale: [1.2, 1, 1.2],
-            rotate: [90, 0, 90],
+            x: [0, -50, 0],
+            y: [0, -30, 0],
           }}
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: 'linear',
+            ease: 'easeInOut',
           }}
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-400 rounded-full blur-3xl"
+          className="absolute -bottom-40 -right-40 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl"
         />
       </div>
 
@@ -60,110 +107,74 @@ export default function GlobalReach() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-white/10 backdrop-blur-sm rounded-full mb-6">
-            <Globe2 className="w-10 h-10 text-green-300" />
-          </div>
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={isInView ? { scale: 1 } : {}}
+            transition={{ duration: 0.5, type: 'spring' }}
+            className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full mb-6 shadow-lg shadow-green-500/50"
+          >
+            <Globe2 className="w-10 h-10 text-white" />
+          </motion.div>
+          
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
             {t.globalTitle}
           </h2>
-          <p className="text-2xl text-green-100 font-semibold mb-4">
-            {t.globalSubtitle}
-          </p>
-          <p className="text-lg text-green-200 max-w-3xl mx-auto">
+          
+          <div className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-3 mb-6">
+            <TrendingUp className="w-5 h-5 text-green-300 mr-2" />
+            <span className="text-xl text-green-100 font-semibold">
+              {t.globalSubtitle}
+            </span>
+          </div>
+          
+          <p className="text-lg text-green-200 max-w-3xl mx-auto leading-relaxed">
             {t.globalDescription}
           </p>
         </motion.div>
 
-        {/* World Map Illustration */}
-        {/* <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : {}}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="mb-16"
+        {/* Stats Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
         >
-          <div className="relative max-w-4xl mx-auto">
-            <div className="text-center text-9xl opacity-30 select-none">
-              🗺️
-            </div>
-
-            {[...Array(8)].map((_, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0 }}
-                animate={
-                  isInView
-                    ? {
-                        opacity: 1,
-                        scale: 1,
-                        y: [0, -10, 0],
-                      }
-                    : {}
-                }
-                transition={{
-                  duration: 0.6,
-                  delay: 0.5 + i * 0.1,
-                  y: {
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: 'easeInOut',
-                    delay: i * 0.2,
-                  },
-                }}
-                className="absolute w-4 h-4 bg-yellow-400 rounded-full shadow-lg"
-                style={{
-                  top: `${20 + Math.random() * 60}%`,
-                  left: `${10 + Math.random() * 80}%`,
-                }}
-              >
-                <div className="absolute inset-0 bg-yellow-400 rounded-full animate-ping opacity-75" />
-              </motion.div>
-            ))}
-          </div>
-        </motion.div> */}
-
-        {/* Continents Grid */}
-        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {continents.map((continent, index) => (
+          {stats.map((stat, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-              className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+              whileHover={{ scale: 1.05, y: -5 }}
+              className="relative group"
             >
-              <div className="text-5xl mb-4 text-center">{continent.emoji}</div>
-              <h3 className="text-xl font-bold text-white mb-2 text-center">
-                {continent.name}
-              </h3>
-              <p className="text-green-200 text-center">
-                {continent.countries}+ Countries
-              </p>
+              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
+              <div className="relative bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
+                <stat.icon className={`w-8 h-8 ${stat.color} mb-3`} />
+                <div className="text-4xl font-bold text-white mb-1">
+                  {stat.number}
+                </div>
+                <div className="text-green-200 text-sm font-medium">
+                  {stat.label}
+                </div>
+              </div>
             </motion.div>
           ))}
-        </div> */}
+        </motion.div>
 
-        {/* Stats */}
+        {/* Bottom CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 1 }}
-          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="text-center"
         >
-          {[
-            { number: '50+', label: 'Countries Served' },
-            { number: '1000+', label: 'Successful Shipments' },
-            { number: '100%', label: 'Client Satisfaction' },
-          ].map((stat, index) => (
-            <div
-              key={index}
-              className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
-            >
-              <div className="text-5xl font-bold text-white mb-2">
-                {stat.number}
-              </div>
-              <div className="text-green-200 text-lg">{stat.label}</div>
-            </div>
-          ))}
+          <div className="inline-flex items-center bg-white/5 backdrop-blur-md border border-white/20 rounded-2xl px-8 py-4">
+            <Globe2 className="w-6 h-6 text-green-300 mr-3" />
+            <p className="text-green-100 text-lg">
+              <span className="font-semibold text-white">Expanding globally</span> - Your trusted partner for international trade
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -25,8 +25,8 @@ export default function Footer() {
 
   const productLinks = [
     { name: t.cattleFeed, slug: 'cattle-feed' },
-    { name: t.rice, slug: 'basmati-rice' },
-    { name: t.rice, slug: 'non-basmati-rice' },
+    { name: t.basmati, slug: 'basmati-rice' },
+    { name: t.nonBasmati, slug: 'non-basmati-rice' },
     { name: t.soyabean, slug: 'soyabean' },
     { name: t.chickpeas, slug: 'chickpeas' },
     { name: t.maize || 'Maize', slug: 'maize' },

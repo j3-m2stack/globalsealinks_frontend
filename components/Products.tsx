@@ -32,14 +32,14 @@ export default function Products() {
       slug: 'chickpeas',
     },
     {
-      title: t.rice,
-      description: t.riceDesc,
+      title: t.basmati,
+      description: t.basmatiDesc,
       image: '/images/basmati-rice.PNG',
       slug: 'basmati-rice',
     },
     {
-      title: t.rice,
-      description: t.riceDesc,
+      title: t.nonBasmati,
+      description: t.nonBasmatiDesc,
       image: '/images/non-basmati-rice.PNG',
       slug: 'non-basmati-rice',
     },

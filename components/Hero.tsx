@@ -35,8 +35,10 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="relative h-screen overflow-hidden pt-20">
-      {/* Background Slider */}
+    <section
+      id="hero"
+      className="relative min-h-[60vh] md:h-screen overflow-hidden bg-black"
+    >      {/* Background Slider */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <AnimatePresence initial={false}>
           <motion.div
@@ -57,8 +59,7 @@ export default function Hero() {
               priority
               sizes="100vw"
               quality={100}
-              className="object-cover scale-110"
-            />
+              className="object-cover object-center" />
           </motion.div>
         </AnimatePresence>
 
@@ -129,19 +130,18 @@ export default function Hero() {
       </div> */}
 
       {/* Dots */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-30">
+      {/* <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-30">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`transition-all duration-300 rounded-full ${
-              index === currentSlide
+            className={`transition-all duration-300 rounded-full ${index === currentSlide
                 ? 'w-10 h-3 bg-white'
                 : 'w-3 h-3 bg-white/50 hover:bg-white/80'
-            }`}
+              }`}
           />
         ))}
-      </div>
+      </div> */}
     </section>
   );
 }

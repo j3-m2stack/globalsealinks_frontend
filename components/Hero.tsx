@@ -25,6 +25,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
+        dir="ltr"
 className="relative h-[42vh] sm:h-[55vh] md:h-[84vh] lg:h-[88vh] overflow-hidden rounded-b-3xl"    >
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectCreative]}

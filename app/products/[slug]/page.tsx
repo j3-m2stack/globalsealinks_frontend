@@ -248,7 +248,7 @@ export default function ProductDetailPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-12 relative overflow-hidden">
+      <section className="pt-30 pb-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-green-100/50 to-emerald-100/50" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

@@ -1,67 +1,77 @@
 'use client';
 
 import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+
+// Static product data - images are language-independent
+const PRODUCT_DATA = [
+  {
+    image: '/images/cattle-feed.png',
+    slug: 'cattle-feed',
+    titleKey: 'cattleFeed',
+    descKey: 'cattleFeedDesc',
+  },
+  {
+    image: '/images/soyabean.png',
+    slug: 'soyabean',
+    titleKey: 'soyabean',
+    descKey: 'soyabeanDesc',
+  },
+  {
+    image: '/images/Chickpeas.jpeg',
+    slug: 'chickpeas',
+    titleKey: 'chickpeas',
+    descKey: 'chickpeasDesc',
+  },
+  {
+    image: '/images/basmati-rice.PNG',
+    slug: 'basmati-rice',
+    titleKey: 'basmati',
+    descKey: 'basmatiDesc',
+  },
+  {
+    image: '/images/non-basmati-rice.PNG',
+    slug: 'non-basmati-rice',
+    titleKey: 'nonBasmati',
+    descKey: 'nonBasmatiDesc',
+  },
+  {
+    image: '/images/Yellow maize.jpeg',
+    slug: 'maize',
+    titleKey: 'maize',
+    descKey: 'maizeDesc',
+  },
+  {
+    image: '/images/Coriander seeds.jpeg',
+    slug: 'coriander',
+    titleKey: 'coriander',
+    descKey: 'corianderDesc',
+  },
+  {
+    image: '/images/onion.png',
+    slug: 'onions',
+    titleKey: 'onions',
+    descKey: 'onionsDesc',
+  },
+];
 
 export default function Products() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const { t } = useLanguage();
 
-  const products = [
-    {
-      title: t.cattleFeed,
-      description: t.cattleFeedDesc,
-      image: '/images/cattle-feed.png',
-      slug: 'cattle-feed',
-    },
-    {
-      title: t.soyabean,
-      description: t.soyabeanDesc,
-      image: '/images/soyabean.png',
-      slug: 'soyabean',
-    },
-    {
-      title: t.chickpeas,
-      description: t.chickpeasDesc,
-      image: '/images/Chickpeas.jpeg',
-      slug: 'chickpeas',
-    },
-    {
-      title: t.basmati,
-      description: t.basmatiDesc,
-      image: '/images/basmati-rice.PNG',
-      slug: 'basmati-rice',
-    },
-    {
-      title: t.nonBasmati,
-      description: t.nonBasmatiDesc,
-      image: '/images/non-basmati-rice.PNG',
-      slug: 'non-basmati-rice',
-    },
-    {
-      title: t.maize || 'Maize',
-      description: t.maizeDesc || 'Premium quality yellow maize, ideal for animal feed, food processing, and industrial applications.',
-      image: '/images/Yellow maize.jpeg',
-      slug: 'maize',
-    },
-    {
-      title: t.coriander,
-      description: t.corianderDesc,
-      image: '/images/Coriander seeds.jpeg',
-      slug: 'coriander',
-    },
-    {
-      title: t.onions,
-      description: t.onionsDesc,
-      image: '/images/onion.png',
-      slug: 'onions',
-    },
-  ];
+  // Memoize products to prevent unnecessary re-renders
+  const products = useMemo(() => {
+    return PRODUCT_DATA.map(product => ({
+      ...product,
+      title: t[product.titleKey as keyof typeof t] || product.titleKey,
+      description: t[product.descKey as keyof typeof t] || product.descKey,
+    }));
+  }, [t]);
 
   const truncateText = (text: string, maxLength = 95) => {
     return text.length > maxLength
@@ -82,7 +92,7 @@ export default function Products() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center bg-green-100 text-green-700 px-5 py-2 rounded-full font-semibold mb-6">
+          <div className="inline-flex  items-center bg-green-100 text-green-700 px-5 py-2 rounded-full font-semibold mb-6">
             {t.premiumQuality}
           </div>
 
@@ -99,26 +109,28 @@ export default function Products() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product, index) => (
             <motion.div
-              key={index}
+              key={product.slug}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: index * 0.1 }}
               className="group h-full"
             >
-              <div className="h-full flex flex-col bg-white rounded-[32px] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+              <div className="h-full flex  rtl-reverse flex-col bg-white rounded-[32px] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
                 {/* Image */}
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-64 overflow-hidden bg-gray-100">
                   <Image
                     src={product.image}
-                    alt={product.title}
+                    alt={product.title || 'Product'}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    priority={index < 3}
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
 
-                  <div className="absolute bottom-5 left-5">
-                    <h3 className="text-3xl font-bold text-white">
+                  <div className="absolute bottom-5 left-5 right-5">
+                    <h3 className="text-3xl font-bold text-white line-clamp-2">
                       {product.title}
                     </h3>
                   </div>
@@ -127,7 +139,7 @@ export default function Products() {
                 {/* Content */}
                 <div className="p-7 flex flex-col flex-1 min-h-[220px]">
                   <p className="text-gray-600 text-lg leading-relaxed mb-5 min-h-[90px]">
-                    {truncateText(product.description)}
+                    {truncateText(product.description || '')}
                   </p>
 
                   <div className="flex-1" />

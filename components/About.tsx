@@ -33,7 +33,7 @@ export default function About() {
     <section
       id="about"
       ref={ref}
-      className="relative py-10 lg:py-28 overflow-hidden"
+      className="relative py-10 lg:py-20 overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#eef9ef] via-white to-[#e2f6e5]" />

@@ -81,30 +81,23 @@ export default function Navbar() {
   ];
 
   const getNavButtonClass = (id: string) =>
-    `px-4 py-2.5 text-sm rounded-lg transition-all font-medium ${
-      activeSection === id
-        ? 'bg-green-100 text-green-700'
-        : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
+    `px-4 py-2.5 text-sm rounded-lg transition-all font-medium ${activeSection === id
+      ? 'bg-green-100 text-green-700'
+      : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
     }`;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50">
-      <div
-        className={`transition-all duration-300 ${
-          isScrolled
-            ? 'bg-white/90 backdrop-blur-xl shadow-xl shadow-green-500/10'
-            : 'bg-white/75 backdrop-blur-md shadow-md'
-        }`}
-      >
+      <div className="bg-white shadow-md border-b border-gray-200 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center h-25">
             {/* Logo */}
             <button
               onClick={() => navigateToSection('hero')}
               className="hover:opacity-80 transition-opacity"
             >
               <Image
-                src="/logo.png"
+                src="/logo.PNG"
                 alt="Global Sea Links"
                 width={180}
                 height={60}
@@ -146,11 +139,10 @@ export default function Navbar() {
                           setLanguage(lang.code);
                           setShowLangMenu(false);
                         }}
-                        className={`w-full text-left px-4 py-2.5 hover:bg-green-50 transition-colors flex items-center space-x-3 ${
-                          language === lang.code
-                            ? 'bg-green-50 text-green-600'
-                            : 'text-gray-700'
-                        }`}
+                        className={`w-full text-left px-4 py-2.5 hover:bg-green-50 transition-colors flex items-center space-x-3 ${language === lang.code
+                          ? 'bg-green-50 text-green-600'
+                          : 'text-gray-700'
+                          }`}
                       >
                         <span>{lang.flag}</span>
                         <span className="text-sm font-medium">
@@ -179,21 +171,46 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden border-t border-gray-100">
+          <div className="lg:hidden border-t border-gray-100 bg-white shadow-lg">
             <div className="px-4 py-4 space-y-2">
               {sections.map((section) => (
                 <button
                   key={section.id}
                   onClick={() => navigateToSection(section.id)}
-                  className={`block w-full text-left font-medium py-3 px-4 rounded-lg ${
-                    activeSection === section.id
+                  className={`block w-full text-left font-medium py-3 px-4 rounded-lg transition-all ${activeSection === section.id
                       ? 'bg-green-100 text-green-700'
                       : 'text-gray-700 hover:bg-green-50'
-                  }`}
+                    }`}
                 >
                   {section.label}
                 </button>
               ))}
+
+              {/* Mobile Language Switcher */}
+              <div className="pt-4 border-t border-gray-100 mt-4">
+                <p className="text-sm font-medium text-gray-500 px-2 mb-2">
+                  Language
+                </p>
+
+                <div className="grid grid-cols-2 gap-2">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => {
+                        setLanguage(lang.code);
+                        setIsOpen(false);
+                      }}
+                      className={`flex items-center justify-center gap-2 py-3 rounded-lg text-sm font-medium transition-all ${language === lang.code
+                          ? 'bg-green-100 text-green-700'
+                          : 'bg-gray-50 text-gray-700 hover:bg-green-50'
+                        }`}
+                    >
+                      <span>{lang.flag}</span>
+                      <span>{lang.name}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         )}

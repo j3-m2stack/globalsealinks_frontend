@@ -21,7 +21,7 @@ body {
   direction: rtl;
 }
 
-[dir="rtl"] .flex {
+[dir="rtl"] .rtl-reverse {
   flex-direction: row-reverse;
 }
 
@@ -122,4 +122,77 @@ body {
 /* Timeline connector */
 .timeline-line {
   background: linear-gradient(to bottom, #2d6a4f, #95d5b2);
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff !important;
+  width:40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transform: scale(1.08);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 10px !important;
+  font-weight: 800;
+}
+
+.swiper-button-prev {
+  left: 24px !important;
+}
+
+.swiper-button-next {
+  right: 24px !important;
+}
+
+.swiper-pagination {
+  bottom: 28px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.45) !important;
+  opacity: 1 !important;
+  transition: all 0.35s ease;
+}
+
+.swiper-pagination-bullet-active {
+  width: 28px;
+  border-radius: 999px;
+  background: #fff !important;
+}
+
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 13px !important;
+  }
+
+  .swiper-button-prev {
+    left: 12px !important;
+  }
+
+  .swiper-button-next {
+    right: 12px !important;
+  }
 }

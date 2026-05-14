@@ -10,6 +10,7 @@ import { useLanguage } from '@/context/LanguageContext';
 export default function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const [errors, setErrors] = useState<Record<string, string>>({});
   const { t } = useLanguage();
   const [formData, setFormData] = useState({
     fullName: '',
@@ -25,6 +26,46 @@ export default function Contact() {
     type: 'success' | 'error' | null;
     message: string;
   }>({ type: null, message: '' });
+
+  const validateForm = () => {
+    const newErrors: Record<string, string> = {};
+
+    if (!formData.fullName.trim()) {
+      newErrors.fullName = t.fullNameRequired;
+    } else if (formData.fullName.trim().length < 2) {
+      newErrors.fullName = t.fullNameMin;
+    }
+
+    if (!formData.companyName.trim()) {
+      newErrors.companyName = t.companyNameRequired;
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = t.emailRequired;
+    } else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email)
+    ) {
+      newErrors.email = t.invalidEmail;
+    }
+
+    if (formData.phone && !/^[0-9+\-\s()]{7,15}$/.test(formData.phone)) {
+      newErrors.phone = t.invalidPhone;
+    }
+
+    if (!formData.country.trim()) {
+      newErrors.country = t.countryRequired;
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = t.messageRequired;
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = t.messageMin;
+    }
+
+    setErrors(newErrors);
+
+    return Object.keys(newErrors).length === 0;
+  };
 
   const certifications = [
     t.apedaCertified,
@@ -49,6 +90,9 @@ export default function Contact() {
 
     // Reset previous status
     setSubmitStatus({ type: null, message: '' });
+
+    if (!validateForm()) return;
+
     setIsSubmitting(true);
 
     try {
@@ -80,7 +124,7 @@ export default function Contact() {
           productOfInterest: '',
           message: ''
         });
-
+setErrors({});
         // Auto-hide success message after 5 seconds
         setTimeout(() => {
           setSubmitStatus({ type: null, message: '' });
@@ -103,14 +147,22 @@ export default function Contact() {
       setIsSubmitting(false);
     }
   };
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+
+    if (errors[name]) {
+      setErrors((prev) => ({
+        ...prev,
+        [name]: '',
+      }));
+    }
   };
 
   return (
@@ -254,7 +306,7 @@ export default function Contact() {
                 </motion.div>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-5 h-full flex flex-col justify-between">
+              <form onSubmit={handleSubmit} noValidate className="space-y-5 h-full flex flex-col justify-between">
                 {/* Row 1: Full Name & Company Name */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
@@ -273,9 +325,16 @@ export default function Contact() {
                       required
                       disabled={isSubmitting}
                       minLength={2}
-                      className="w-full px-4 py-2.5 rounded-xl border-2 border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all outline-none text-gray-900 disabled:bg-gray-100 disabled:cursor-not-allowed text-sm"
-                      placeholder={t.enterFullName}
+                      className={`w-full px-4 py-2.5 rounded-xl border-2 transition-all outline-none text-sm
+  ${errors.fullName
+                          ? 'border-red-500 focus:ring-red-200'
+                          : 'border-gray-200 focus:border-green-500 focus:ring-green-200'
+                        }`} placeholder={t.enterFullName}
                     />
+
+                    {errors.fullName && (
+                      <p className="text-red-500 text-xs mt-1">{errors.fullName}</p>
+                    )}
                   </div>
 
                   <div>
@@ -297,6 +356,10 @@ export default function Contact() {
                       className="w-full px-4 py-2.5 rounded-xl border-2 border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all outline-none text-gray-900 disabled:bg-gray-100 disabled:cursor-not-allowed text-sm"
                       placeholder={t.enterCompanyName}
                     />
+
+                    {errors.companyName && (
+                      <p className="text-red-500 text-xs mt-1">{errors.companyName}</p>
+                    )}
                   </div>
                 </div>
 
@@ -317,9 +380,16 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       disabled={isSubmitting}
-                      className="w-full px-4 py-2.5 rounded-xl border-2 border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all outline-none text-gray-900 disabled:bg-gray-100 disabled:cursor-not-allowed text-sm"
-                      placeholder={t.enterEmail}
+className={`w-full px-4 py-2.5 rounded-xl border-2 transition-all outline-none text-gray-900 disabled:bg-gray-100 disabled:cursor-not-allowed text-sm
+${errors.email
+  ? 'border-red-500 focus:ring-red-200'
+  : 'border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200'
+}`}                      placeholder={t.enterEmail}
                     />
+
+                    {errors.email && (
+                      <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                    )}
                   </div>
 
                   <div>
@@ -339,6 +409,10 @@ export default function Contact() {
                       className="w-full px-4 py-2.5 rounded-xl border-2 border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all outline-none text-gray-900 disabled:bg-gray-100 disabled:cursor-not-allowed text-sm"
                       placeholder={t.enterPhone}
                     />
+
+               {errors.phone && (
+  <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+)}
                   </div>
                 </div>
 
@@ -363,6 +437,10 @@ export default function Contact() {
                       className="w-full px-4 py-2.5 rounded-xl border-2 border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all outline-none text-gray-900 disabled:bg-gray-100 disabled:cursor-not-allowed text-sm"
                       placeholder={t.enterCountry}
                     />
+
+                    {errors.country && (
+                      <p className="text-red-500 text-xs mt-1">{errors.country}</p>
+                    )}
                   </div>
 
                   <div>
@@ -413,6 +491,10 @@ export default function Contact() {
                     className="w-full px-4 py-2.5 rounded-xl border-2 border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all outline-none resize-none text-gray-900 disabled:bg-gray-100 disabled:cursor-not-allowed text-sm"
                     placeholder={t.enterMessage}
                   />
+
+                  {errors.message && (
+                    <p className="text-red-500 text-xs mt-1">{errors.message}</p>
+                  )}
                 </div>
 
                 {/* Submit Button */}
@@ -455,8 +537,7 @@ export default function Contact() {
                     {t.officeAddress}
                   </h4>
                   <p className="text-gray-700 text-sm leading-relaxed">
-                    Madhuban Colony, Jalgaon Road, Jamner<br />
-                    Jalgaon, Maharashtra 424206<br />
+                    86/A Bhawanipur Colony Annapurna road indore (MP)<br />
                     India
                   </p>
                 </div>
@@ -474,16 +555,16 @@ export default function Contact() {
                     {t.phone}
                   </h4>
                   <a
-                    href="tel:+919423744675"
+                    href="tel:+917879068147"
                     className="text-gray-700 hover:text-blue-700 font-medium block text-sm mb-1"
                   >
-                    +91 9423744675
+                    +91 7879068147
                   </a>
                   <a
-                    href="tel:+919423744675"
+                    href="tel:+918959893299"
                     className="text-gray-700 hover:text-blue-700 font-medium block text-sm"
                   >
-                    +91 9423744675 (WhatsApp)
+                    +91 8959893299 (WhatsApp)
                   </a>
                 </div>
               </div>
@@ -500,16 +581,10 @@ export default function Contact() {
                     {t.email}
                   </h4>
                   <a
-                    href="mailto:sales@siaexim.com"
+                    href="mailto:globalsealinks01@gmail.com"
                     className="text-gray-700 hover:text-blue-700 font-medium break-all text-sm block mb-1"
                   >
-                    sales@siaexim.com
-                  </a>
-                  <a
-                    href="mailto:contact@siaexim.com"
-                    className="text-gray-700 hover:text-blue-700 font-medium break-all text-sm block"
-                  >
-                    contact@siaexim.com
+                    globalsealinks01@gmail.com
                   </a>
                 </div>
               </div>
@@ -557,22 +632,19 @@ export default function Contact() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mt-12"
         >
-          <div >
-            <div className="w-full h-64 sm:h-80 lg:h-96 rounded-xl overflow-hidden border-2 border-gray-200">
+          <div className="rounded-2xl overflow-hidden shadow-2xl border border-emerald-200">
+            <div className="w-full h-64 sm:h-80 lg:h-96">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.8!2d75.8!3d21.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDEyJzAwLjAiTiA3NcKwNDgnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://maps.google.com/maps?q=86/A%20Bhawanipur%20Colony%20Annapurna%20Road%20Indore%20MP&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Office Location - Madhuban Colony, Jalgaon Road, Jamner"
+                title="Global Sea Links - 86/A Bhawanipur Colony Annapurna Road Indore MP"
               />
             </div>
-            <p className="text-sm text-gray-600 mt-3 text-center">
-              Madhuban Colony, Jalgaon Road, Jamner, Jalgaon, Maharashtra 424206, India
-            </p>
           </div>
         </motion.div>
       </div>

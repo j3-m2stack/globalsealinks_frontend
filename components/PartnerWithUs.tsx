@@ -13,7 +13,7 @@ export default function PartnerWithUs() {
   const { t } = useLanguage();
 
   const whatsappLink =
-    'https://wa.me/918950003299?text=Hello%20I%20want%20to%20discuss%20partnership%20opportunities';
+    'https://wa.me/918959893299?text=Hello%20I%20want%20to%20discuss%20partnership%20opportunities';
 
   const benefits = [
     {

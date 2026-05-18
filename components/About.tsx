@@ -84,7 +84,7 @@ export default function About() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             className="space-y-6 order-1 lg:order-2"
           >
-            <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm">
+            <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-full text-2xl">
               <Leaf className="w-4 h-4" />
               {t.whyChooseUs}
             </div>

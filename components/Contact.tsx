@@ -459,13 +459,14 @@ ${errors.email
                       className="w-full px-4 py-2.5 rounded-xl border-2 border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all outline-none text-gray-900 disabled:bg-gray-100 disabled:cursor-not-allowed text-sm"
                     >
                       <option value="">{t.selectCategory}</option>
-                      <option value="Basmati Rice">{t.basmatiRice}</option>
-                      <option value="Non-Basmati Rice">{t.nonBasmatiRice}</option>
-                      <option value="Wheat">{t.wheat}</option>
-                      <option value="Corn">{t.corn}</option>
-                      <option value="Soybean">{t.soybean}</option>
-                      <option value="Sugar">{t.sugar}</option>
-                      <option value="Spices">{t.spices}</option>
+                      <option value="Cattle Feed">{t.cattleFeed}</option>
+                      <option value="Soyabean">{t.soyabean}</option>
+                      <option value="Chickpeas">{t.chickpeas}</option>
+                      <option value="Basmati Rice">{t.basmati}</option>
+                      <option value="Non-Basmati Rice">{t.nonBasmati}</option>
+                      <option value="Maize">{t.maize}</option>
+                      <option value="Coriander Seeds">{t.coriander}</option>
+                      <option value="Onions">{t.onions}</option>
                       <option value="Other">{t.other}</option>
                     </select>
                   </div>

@@ -115,7 +115,7 @@ export default function Products() {
               transition={{ delay: index * 0.1 }}
               className="group h-full"
             >
-              <div className="h-full flex  rtl-reverse flex-col bg-white rounded-[32px] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+              <div className="h-full flex flex-col bg-white rounded-[32px] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
                 {/* Image */}
                 <div className="relative h-64 overflow-hidden bg-gray-100">
                   <Image

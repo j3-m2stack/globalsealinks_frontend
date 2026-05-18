@@ -219,7 +219,7 @@ aboutHeadingLine2: 'Global Markets',
     enterMessage: 'Please provide details about your requirements, quantities, and any specific questions...',
     
     // About Section - Additional
-    whyChooseUs: 'Why Choose Us',
+    whyChooseUs: 'About Us',
     deliveringPremium: 'Delivering Premium Agro Products to',
     globalMarkets: 'Global Markets',
     
@@ -627,7 +627,7 @@ aboutHeadingLine2: 'الأسواق العالمية',
     enterMessage: 'يرجى تقديم تفاصيل حول متطلباتك والكميات وأي أسئلة محددة...',
     
     // About Section - Additional
-    whyChooseUs: 'لماذا تختارنا',
+    whyChooseUs: 'من نحن',
     deliveringPremium: 'توصيل المنتجات الزراعية الممتازة إلى',
     globalMarkets: 'الأسواق العالمية',
     
@@ -1035,7 +1035,7 @@ aboutHeadingLine2: 'marchés mondiaux',
     enterMessage: 'Veuillez fournir des détails sur vos besoins, quantités et toute question spécifique...',
     
     // About Section - Additional
-    whyChooseUs: 'Pourquoi nous choisir',
+    whyChooseUs: 'À propos de nous',
     deliveringPremium: 'Livrer des produits agricoles premium aux',
     globalMarkets: 'marchés mondiaux',
     
@@ -1444,7 +1444,7 @@ aboutHeadingLine2: 'marchés mondiaux',
     enterMessage: 'Por favor proporcione detalles sobre sus requisitos, cantidades y cualquier pregunta específica...',
     
     // About Section - Additional
-    whyChooseUs: 'Por qué elegirnos',
+    whyChooseUs: 'Sobre nosotros',
     deliveringPremium: 'Entregando productos agrícolas premium a',
     globalMarkets: 'mercados globales',
     

@@ -90,7 +90,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50">
       <div className="bg-white shadow-md border-b border-gray-200 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-25">
+          <div className="flex justify-between items-center h-28">
             {/* Logo */}
             <button
               onClick={() => navigateToSection('hero')}
@@ -101,7 +101,7 @@ export default function Navbar() {
                 alt="Global Sea Links"
                 width={180}
                 height={60}
-                className="h-25 w-auto"
+                className="h-28 w-auto"
                 priority
               />
             </button>

@@ -48,7 +48,10 @@ export default function Navbar() {
 
     sections.forEach((section) => {
       const el = document.getElementById(section.id);
-      if (el) observer.observe(el);
+
+      if (el) {
+        observer.observe(el);
+      }
     });
 
     return () => {
@@ -64,8 +67,11 @@ export default function Navbar() {
       router.push(`/#${id}`);
     } else {
       const element = document.getElementById(id);
+
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({
+          behavior: 'smooth',
+        });
       }
     }
 
@@ -81,33 +87,63 @@ export default function Navbar() {
   ];
 
   const getNavButtonClass = (id: string) =>
-    `px-4 py-2.5 text-sm rounded-lg transition-all font-medium ${activeSection === id
-      ? 'bg-green-100 text-green-700'
-      : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
+    `px-4 py-2.5 text-sm rounded-xl transition-all duration-300 font-medium ${
+      activeSection === id
+        ? 'bg-green-100 text-green-700 shadow-sm'
+        : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
     }`;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50">
-      <div className="bg-white shadow-md border-b border-gray-200 transition-all duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-28">
-            {/* Logo */}
+      <div
+        className={`transition-all duration-300 border-b ${
+          isScrolled
+            ? 'bg-white/95 backdrop-blur-lg shadow-lg border-gray-200'
+            : 'bg-white border-gray-100 shadow-md'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-3 sm:px-5 lg:px-8">
+          {/* TOP AREA */}
+          <div
+            className="
+              flex flex-col items-center justify-center py-2
+
+              lg:flex-row
+              lg:items-center
+              lg:justify-between
+              lg:h-[120px]
+            "
+          >
+            {/* LOGO */}
             <button
               onClick={() => navigateToSection('hero')}
-              className="hover:opacity-80 transition-opacity"
+              className="flex items-center justify-center shrink-0"
             >
               <Image
-                src="/logo.PNG"
-                alt="Global Sea Links"
-                width={180}
-                height={60}
-                className="h-28 w-auto"
+                src="/logo-main.png"
+                alt="Logo"
+                width={500}
+                height={300}
                 priority
+                className="
+                  w-auto
+                  transition-all
+                  duration-300
+                  
+                  h-[130px]
+                  sm:h-[170px]
+                  md:h-[210px]
+
+                  lg:h-[120px]
+                  xl:h-[140px]
+
+                  object-contain
+                "
               />
             </button>
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-2">
+            {/* DESKTOP NAVIGATION */}
+            <div className="hidden lg:flex items-center gap-2 flex-wrap justify-center">
               {sections.map((section) => (
                 <button
                   key={section.id}
@@ -118,20 +154,26 @@ export default function Navbar() {
                 </button>
               ))}
 
-              {/* Language Switcher */}
+              {/* LANGUAGE SWITCHER */}
               <div className="relative ml-2">
                 <button
                   onClick={() => setShowLangMenu(!showLangMenu)}
-                  className="flex items-center space-x-2 px-4 py-2.5 rounded-lg bg-gradient-to-r from-green-50 to-emerald-50 hover:from-green-100 hover:to-emerald-100 transition-all border border-green-200/50"
+                  className="
+                    flex items-center gap-2 px-4 py-2.5 rounded-xl
+                    bg-gradient-to-r from-green-50 to-emerald-50
+                    hover:from-green-100 hover:to-emerald-100
+                    transition-all border border-green-200/50
+                  "
                 >
                   <Globe className="w-4 h-4 text-green-600" />
+
                   <span>
                     {languages.find((l) => l.code === language)?.flag}
                   </span>
                 </button>
 
                 {showLangMenu && (
-                  <div className="absolute top-full mt-2 right-0 bg-white rounded-xl shadow-2xl border border-gray-100 py-2 min-w-[170px] overflow-hidden">
+                  <div className="absolute top-full mt-2 right-0 bg-white rounded-xl shadow-2xl border border-gray-100 py-2 min-w-[170px] overflow-hidden z-50">
                     {languages.map((lang) => (
                       <button
                         key={lang.code}
@@ -139,12 +181,14 @@ export default function Navbar() {
                           setLanguage(lang.code);
                           setShowLangMenu(false);
                         }}
-                        className={`w-full text-left px-4 py-2.5 hover:bg-green-50 transition-colors flex items-center space-x-3 ${language === lang.code
-                          ? 'bg-green-50 text-green-600'
-                          : 'text-gray-700'
-                          }`}
+                        className={`w-full text-left px-4 py-2.5 hover:bg-green-50 transition-colors flex items-center space-x-3 ${
+                          language === lang.code
+                            ? 'bg-green-50 text-green-600'
+                            : 'text-gray-700'
+                        }`}
                       >
                         <span>{lang.flag}</span>
+
                         <span className="text-sm font-medium">
                           {lang.name}
                         </span>
@@ -155,44 +199,53 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* Mobile Button */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2.5 rounded-lg text-gray-700 hover:bg-green-50"
-            >
-              {isOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </button>
+            {/* MOBILE HAMBURGER BELOW LOGO */}
+            <div className="lg:hidden mt-2 pb-3">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="
+                  flex items-center justify-center
+                  p-3 rounded-xl
+                  bg-green-50 text-green-700
+                  hover:bg-green-100
+                  transition-all shadow-sm
+                "
+              >
+                {isOpen ? (
+                  <X className="w-7 h-7" />
+                ) : (
+                  <Menu className="w-7 h-7" />
+                )}
+              </button>
+            </div>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* MOBILE NAVIGATION */}
         {isOpen && (
           <div className="lg:hidden border-t border-gray-100 bg-white shadow-lg">
-            <div className="px-4 py-4 space-y-2">
+            <div className="px-4 py-4 space-y-3">
               {sections.map((section) => (
                 <button
                   key={section.id}
                   onClick={() => navigateToSection(section.id)}
-                  className={`block w-full text-left font-medium py-3 px-4 rounded-lg transition-all ${activeSection === section.id
+                  className={`block w-full text-left font-medium py-3 px-4 rounded-xl transition-all ${
+                    activeSection === section.id
                       ? 'bg-green-100 text-green-700'
-                      : 'text-gray-700 hover:bg-green-50'
-                    }`}
+                      : 'text-gray-700 hover:bg-green-50 bg-gray-50'
+                  }`}
                 >
                   {section.label}
                 </button>
               ))}
 
-              {/* Mobile Language Switcher */}
+              {/* MOBILE LANGUAGE SWITCHER */}
               <div className="pt-4 border-t border-gray-100 mt-4">
-                <p className="text-sm font-medium text-gray-500 px-2 mb-2">
+                <p className="text-sm font-medium text-gray-500 px-2 mb-3">
                   Language
                 </p>
 
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 gap-3">
                   {languages.map((lang) => (
                     <button
                       key={lang.code}
@@ -200,10 +253,11 @@ export default function Navbar() {
                         setLanguage(lang.code);
                         setIsOpen(false);
                       }}
-                      className={`flex items-center justify-center gap-2 py-3 rounded-lg text-sm font-medium transition-all ${language === lang.code
+                      className={`flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-medium transition-all ${
+                        language === lang.code
                           ? 'bg-green-100 text-green-700'
                           : 'bg-gray-50 text-gray-700 hover:bg-green-50'
-                        }`}
+                      }`}
                     >
                       <span>{lang.flag}</span>
                       <span>{lang.name}</span>

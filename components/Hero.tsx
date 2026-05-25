@@ -4,7 +4,12 @@ import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay, EffectCreative } from 'swiper/modules';
+import {
+  Navigation,
+  Pagination,
+  Autoplay,
+  EffectCreative,
+} from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -25,8 +30,24 @@ export default function Hero() {
   return (
     <section
       id="hero"
-        dir="ltr"
-className="relative h-[42vh] sm:h-[55vh] md:h-[84vh] lg:h-[88vh] overflow-hidden rounded-b-3xl"    >
+      dir="ltr"
+      className="
+        relative
+        overflow-hidden
+        rounded-b-3xl
+
+        mt-[150px]
+        sm:mt-[150px]
+        md:mt-[100px]
+
+        lg:mt-[10px]
+
+        h-[42vh]
+        sm:h-[55vh]
+        md:h-[84vh]
+        lg:h-[88vh]
+      "
+    >
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectCreative]}
         navigation
@@ -50,22 +71,24 @@ className="relative h-[42vh] sm:h-[55vh] md:h-[84vh] lg:h-[88vh] overflow-hidden
         className="h-full"
       >
         {slides.map((slide, index) => (
-      <SwiperSlide key={index}>
-<div className="relative w-full h-full">    <Image
-      src={slide.url}
-      alt={slide.alt}
-      fill
-      priority
-      quality={100}
-      sizes="100vw"
-className="object-cover object-center md:object-center"    />
+          <SwiperSlide key={index}>
+            <div className="relative w-full h-full">
+              <Image
+                src={slide.url}
+                alt={slide.alt}
+                fill
+                priority
+                quality={100}
+                sizes="100vw"
+                className="object-cover object-center"
+              />
 
-    <div className="absolute inset-0 bg-black/25 md:bg-black/35" />
-  </div>
-</SwiperSlide>
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/25 md:bg-black/35" />
+            </div>
+          </SwiperSlide>
         ))}
       </Swiper>
-
     </section>
   );
 }

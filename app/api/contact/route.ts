@@ -285,7 +285,7 @@ This email was sent from the Global Sea Links website.
     // Mail options
     const mailOptions = {
       from: `"Global Sea Links Inquiry Form" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_TO || process.env.EMAIL_USER,
+      to: process.env.EMAIL_TO,
       replyTo: email.trim(),
       subject: `New Inquiry from ${fullName.trim()}`,
       text: textContent,

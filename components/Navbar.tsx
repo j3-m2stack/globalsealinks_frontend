@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import Image from 'next/image';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X, Globe, Phone } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { Language } from '@/lib/translations';
 
@@ -14,6 +14,7 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState('hero');
 
   const { language, setLanguage, t } = useLanguage();
+
   const router = useRouter();
   const pathname = usePathname();
 
@@ -87,37 +88,26 @@ export default function Navbar() {
   ];
 
   const getNavButtonClass = (id: string) =>
-    `px-4 py-2.5 text-sm rounded-xl transition-all duration-300 font-medium ${
-      activeSection === id
-        ? 'bg-green-100 text-green-700 shadow-sm'
-        : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
+    `px-4 py-2.5 text-sm rounded-xl transition-all duration-300 font-medium ${activeSection === id
+      ? 'bg-green-100 text-green-700 shadow-sm'
+      : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
     }`;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50">
       <div
-        className={`transition-all duration-300 border-b ${
-          isScrolled
-            ? 'bg-white/95 backdrop-blur-lg shadow-lg border-gray-200'
-            : 'bg-white border-gray-100 shadow-md'
-        }`}
+        className={`transition-all duration-300 border-b ${isScrolled
+          ? 'bg-white/95 backdrop-blur-lg shadow-lg border-gray-200'
+          : 'bg-white border-gray-100 shadow-md'
+          }`}
       >
         <div className="max-w-7xl mx-auto px-3 sm:px-5 lg:px-8">
           {/* TOP AREA */}
-          <div
-            className="
-              flex flex-col items-center justify-center py-2
-
-              lg:flex-row
-              lg:items-center
-              lg:justify-between
-              lg:h-[120px]
-            "
-          >
+          <div className="flex items-center justify-between py-2 lg:h-[120px]">
             {/* LOGO */}
             <button
               onClick={() => navigateToSection('hero')}
-              className="flex items-center justify-center shrink-0"
+              className="flex items-center shrink-0"
             >
               <Image
                 src="/logo-main.png"
@@ -126,21 +116,38 @@ export default function Navbar() {
                 height={300}
                 priority
                 className="
-                  w-auto
-                  transition-all
-                  duration-300
-                  
-                  h-[130px]
-                  sm:h-[170px]
-                  md:h-[210px]
-
-                  lg:h-[120px]
-                  xl:h-[140px]
-
-                  object-contain
-                "
+                w-auto
+                transition-all
+                duration-300
+                h-[130px]
+                sm:h-[160px]
+                md:h-[180px]
+                lg:h-[120px]
+                xl:h-[140px]
+                object-contain
+                " 
               />
             </button>
+
+            {/* MOBILE HAMBURGER */}
+            <div className="lg:hidden">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="
+                flex items-center justify-center
+                p-3 rounded-xl
+                bg-green-50 text-green-700
+                hover:bg-green-100
+                transition-all shadow-sm
+              "
+              >
+                {isOpen ? (
+                  <X className="w-7 h-7" />
+                ) : (
+                  <Menu className="w-7 h-7" />
+                )}
+              </button>
+            </div>
 
             {/* DESKTOP NAVIGATION */}
             <div className="hidden lg:flex items-center gap-2 flex-wrap justify-center">
@@ -159,11 +166,11 @@ export default function Navbar() {
                 <button
                   onClick={() => setShowLangMenu(!showLangMenu)}
                   className="
-                    flex items-center gap-2 px-4 py-2.5 rounded-xl
-                    bg-gradient-to-r from-green-50 to-emerald-50
-                    hover:from-green-100 hover:to-emerald-100
-                    transition-all border border-green-200/50
-                  "
+                  flex items-center gap-2 px-4 py-2.5 rounded-xl
+                  bg-gradient-to-r from-green-50 to-emerald-50
+                  hover:from-green-100 hover:to-emerald-100
+                  transition-all border border-green-200/50
+                "
                 >
                   <Globe className="w-4 h-4 text-green-600" />
 
@@ -181,11 +188,10 @@ export default function Navbar() {
                           setLanguage(lang.code);
                           setShowLangMenu(false);
                         }}
-                        className={`w-full text-left px-4 py-2.5 hover:bg-green-50 transition-colors flex items-center space-x-3 ${
-                          language === lang.code
-                            ? 'bg-green-50 text-green-600'
-                            : 'text-gray-700'
-                        }`}
+                        className={`w-full text-left px-4 py-2.5 hover:bg-green-50 transition-colors flex items-center space-x-3 ${language === lang.code
+                          ? 'bg-green-50 text-green-600'
+                          : 'text-gray-700'
+                          }`}
                       >
                         <span>{lang.flag}</span>
 
@@ -198,26 +204,6 @@ export default function Navbar() {
                 )}
               </div>
             </div>
-
-            {/* MOBILE HAMBURGER BELOW LOGO */}
-            <div className="lg:hidden mt-2 pb-3">
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="
-                  flex items-center justify-center
-                  p-3 rounded-xl
-                  bg-green-50 text-green-700
-                  hover:bg-green-100
-                  transition-all shadow-sm
-                "
-              >
-                {isOpen ? (
-                  <X className="w-7 h-7" />
-                ) : (
-                  <Menu className="w-7 h-7" />
-                )}
-              </button>
-            </div>
           </div>
         </div>
 
@@ -229,11 +215,10 @@ export default function Navbar() {
                 <button
                   key={section.id}
                   onClick={() => navigateToSection(section.id)}
-                  className={`block w-full text-left font-medium py-3 px-4 rounded-xl transition-all ${
-                    activeSection === section.id
-                      ? 'bg-green-100 text-green-700'
-                      : 'text-gray-700 hover:bg-green-50 bg-gray-50'
-                  }`}
+                  className={`block w-full text-left font-medium py-3 px-4 rounded-xl transition-all ${activeSection === section.id
+                    ? 'bg-green-100 text-green-700'
+                    : 'text-gray-700 hover:bg-green-50 bg-gray-50'
+                    }`}
                 >
                   {section.label}
                 </button>
@@ -253,11 +238,10 @@ export default function Navbar() {
                         setLanguage(lang.code);
                         setIsOpen(false);
                       }}
-                      className={`flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-medium transition-all ${
-                        language === lang.code
-                          ? 'bg-green-100 text-green-700'
-                          : 'bg-gray-50 text-gray-700 hover:bg-green-50'
-                      }`}
+                      className={`flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-medium transition-all ${language === lang.code
+                        ? 'bg-green-100 text-green-700'
+                        : 'bg-gray-50 text-gray-700 hover:bg-green-50'
+                        }`}
                     >
                       <span>{lang.flag}</span>
                       <span>{lang.name}</span>

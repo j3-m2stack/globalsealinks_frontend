@@ -238,14 +238,14 @@ export async function POST(request: NextRequest) {
             <div class="timestamp">
               📅 Received:
               ${new Date().toLocaleString('en-US', {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit',
-                timeZoneName: 'short',
-              })}
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      timeZoneName: 'short',
+    })}
             </div>
           </div>
 
@@ -271,9 +271,8 @@ Company Name: ${companyName?.trim() || 'N/A'}
 Email: ${email.trim()}
 Phone: ${phone.trim()}
 Country: ${country.trim()}
-Product of Interest: ${
-      productOfInterest?.trim() || 'Not Specified'
-    }
+Product of Interest: ${productOfInterest?.trim() || 'Not Specified'
+      }
 
 Message:
 ${message.trim()}
@@ -296,7 +295,116 @@ This email was sent from the Global Sea Links website.
     // Send email
     const info = await transporter.sendMail(mailOptions);
 
-    console.log('Email sent successfully:', info.messageId);
+await transporter.sendMail({
+  from: `"Global Sea Links" <${process.env.EMAIL_USER}>`,
+  to: email.trim(),
+  subject: 'Thank you for contacting Global Sea Links',
+  html: `
+    <!DOCTYPE html>
+    <html>
+      <body style="margin:0;padding:0;background:#f3f4f6;font-family:Arial,sans-serif;">
+        <div style="max-width:650px;margin:40px auto;padding:20px;">
+          
+          <div style="
+            background:linear-gradient(135deg,#059669,#10b981);
+            color:#ffffff;
+            padding:40px 30px;
+            text-align:center;
+            border-radius:16px 16px 0 0;
+          ">
+            <h1 style="margin:0;font-size:30px;">
+              🌍 Global Sea Links
+            </h1>
+            <p style="margin:12px 0 0;font-size:16px;opacity:0.95;">
+              Thank you for contacting us!
+            </p>
+          </div>
+
+          <div style="
+            background:#ffffff;
+            padding:40px 30px;
+            border:1px solid #e5e7eb;
+            border-top:none;
+            border-radius:0 0 16px 16px;
+          ">
+            <h2 style="
+              margin-top:0;
+              color:#111827;
+              font-size:24px;
+            ">
+              Hello ${fullName.trim()}, 👋
+            </h2>
+
+            <p style="
+              color:#4b5563;
+              font-size:16px;
+              line-height:1.8;
+              margin-bottom:20px;
+            ">
+              Thank you for reaching out to <strong>Global Sea Links</strong>.
+              We have successfully received your inquiry.
+            </p>
+
+            <div style="
+              background:#f9fafb;
+              border-left:5px solid #10b981;
+              padding:20px;
+              border-radius:10px;
+              margin:25px 0;
+            ">
+              <p style="margin:0;color:#374151;line-height:1.8;">
+                📩 Our team is currently reviewing your request and will get back to you as soon as possible.
+              </p>
+            </div>
+
+            <p style="
+              color:#4b5563;
+              font-size:16px;
+              line-height:1.8;
+            ">
+              We appreciate your interest in our products and services and look forward to assisting you.
+            </p>
+
+            <div style="text-align:center;margin:35px 0;">
+              <a
+                href="https://globalsealinks.com"
+                style="
+                  display:inline-block;
+                  background:#059669;
+                  color:#ffffff;
+                  text-decoration:none;
+                  padding:14px 30px;
+                  border-radius:10px;
+                  font-weight:bold;
+                  font-size:15px;
+                "
+              >
+                Visit Our Website
+              </a>
+            </div>
+
+            <hr style="border:none;border-top:1px solid #e5e7eb;margin:30px 0;">
+
+            <p style="
+              color:#6b7280;
+              font-size:14px;
+              line-height:1.7;
+              text-align:center;
+              margin:0;
+            ">
+              Best Regards,<br>
+              <strong style="color:#111827;">
+                Global Sea Links Team
+              </strong><br>
+              🌍 Connecting Markets Worldwide
+            </p>
+          </div>
+
+        </div>
+      </body>
+    </html>
+  `,
+});
 
     return NextResponse.json(
       {

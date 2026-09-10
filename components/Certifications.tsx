@@ -29,7 +29,7 @@ const certificationsData: CertificationItem[] = [
     description:
       'Registered under Goods and Services Tax (GST) for transparent and compliant business operations.',
     // Set to null as placeholder per request so user can add exact logo later
-    imageSrc: null,
+    imageSrc: '/images/certifications/gst.png',
     imageAlt: 'GST Registered Logo',
   },
   {
@@ -72,13 +72,12 @@ function CardLogo({ cert }: { cert: CertificationItem }) {
     <img
       src={cert.imageSrc}
       alt={cert.imageAlt}
-      className={`h-14 sm:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 ${
-        cert.id === 'dgft'
+      className={`h-14 sm:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 ${cert.id === 'dgft'
           ? 'max-w-[92%] rounded shadow-sm'
           : cert.id === 'fieo'
-          ? 'max-w-[65%]'
-          : 'max-w-[80%]'
-      }`}
+            ? 'max-w-[65%]'
+            : 'max-w-[80%]'
+        }`}
     />
   );
 }

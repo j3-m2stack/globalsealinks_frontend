@@ -6,42 +6,46 @@ export const translations = {
     home: 'Home',
     about: 'About',
     products: 'Products',
-    process : 'Process',
+    process: 'Process',
     imports: 'Imports',
     contact: 'Contact',
-    
+
     // Hero Section
     heroHeading: 'Connecting Global Markets with Quality Agro Products',
     heroSubtext: 'Trusted supplier and exporter of cattle feed and agro commodities',
     exploreProducts: 'Explore Products',
     contactUs: 'Contact Us',
-    
+
     // About Section
     aboutTitle: 'Why Choose Global Sea Links',
-    aboutDescription: 'At Global Sea Links, we take pride in being a reliable supplier and exporter of premium-quality cattle feed and agro products. With a strong focus on nutrition, quality assurance, and consistency, our products are designed to support better yield, healthier livestock, and sustainable farming. We also deal in a wide range of commodities, including grains and various agricultural products, and provide customized sourcing and supply services tailored to meet buyers\' specific requirements. Our commitment to quality, transparency, and timely delivery ensures long-term trust and satisfaction across global markets.',
+    aboutDescription: `Global Sea Links is an India-based export and sourcing company supplying agricultural commodities and feed ingredients to international buyers.
+
+We work with a network of trusted manufacturers, processors and suppliers across India to source products according to our buyers\' required specifications, quality parameters and packing requirements.
+
+Our product range includes cottonseed oil cake, groundnut cake, DDGS, DORB, soybean meal, wheat bran, yellow maize, pulses, rice and other agricultural commodities.
+
+We focus on reliable sourcing, product quality, transparent communication and timely shipment coordination.Before dispatch, we coordinate product specifications, documentation, packing and quality requirements with the buyer and supplier.
+
+Whether you require a regular supply or a customized sourcing solution, our objective is to make procurement from India simple, transparent and dependable.`,
     assuredQuality: 'Assured Quality',
     assuredQualityDesc: 'Every order undergoes strict quality control and lab testing. We follow international standards including ISO, FSSAI, and APEDA compliance at every stage.',
     exportDoc: 'Complete Export Documentation',
     exportDocDesc: 'From phytosanitary certificates to fumigation, bill of lading, and customs clearance — we handle the entire export documentation process smoothly.',
-    countries: 'Worldwide Market Reach',
-    countriesDesc: 'Our strong export network spans 50+ countries including the Middle East, Southeast Asia, Africa, Europe, and the Americas.',
     logistics: 'Dependable Logistics',
     logisticsDesc: 'We collaborate with trusted freight partners for FCL and LCL shipments, ensuring smooth delivery with real-time tracking support.',
-    certifiedOrganic: 'Certified Organic Products',
-    certifiedOrganicDesc: 'We offer a wide portfolio of certified organic products with NPOP and NOP (USDA) certifications, ideal for premium international markets.',
     directFarm: 'Direct Farm Procurement',
     directFarmDesc: 'We source directly from 500+ farmer groups across India, eliminating middlemen and maintaining full traceability from farm to shipment.',
     competitive: 'Competitive Pricing',
     competitiveDesc: 'Our direct sourcing model allows us to offer highly competitive FOB, CIF, and CFR pricing with clear and quick quotations.',
     featureBadge: 'Why Choose GloLinks',
-strengthsBadge: 'Our Strengths',
-trustTitle: 'Why Global Buyers Trust Us',
-trustSubtitle: 'Premium sourcing, seamless logistics, and globally trusted export excellence.',
-trustedPartner: 'Trusted Global Export Partner',
-servingCountries: 'Serving 50+ countries worldwide',
-certifiedOrganicShort: 'Certified Organic',
-aboutHeadingLine1: 'Delivering Premium Agro Products to',
-aboutHeadingLine2: 'Global Markets',
+    strengthsBadge: 'Our Strengths',
+    trustTitle: 'Why Global Buyers Trust Us',
+    trustSubtitle: 'Premium sourcing, seamless logistics, and globally trusted export excellence.',
+    trustedPartner: 'Trusted Global Export Partner',
+    servingCountries: 'Serving 50+ countries worldwide',
+    certifiedOrganicShort: 'Certified Organic',
+    aboutHeadingLine1: 'Delivering Premium Agro Products to',
+    aboutHeadingLine2: 'Global Markets',
     // Products Section
     productsTitle: 'Our Premium Products',
     productsSubtitle: 'Quality agro commodities for global markets',
@@ -62,7 +66,7 @@ aboutHeadingLine2: 'Global Markets',
     onionsDesc: 'Onions are one of the most essential and widely traded agricultural commodities, valued for their strong flavor, long shelf life, and versatility across global cuisines.',
     maize: 'Maize',
     maizeDesc: 'Premium quality yellow maize, ideal for animal feed, food processing, and industrial applications.',
-    
+
     // Export Process
     processTitle: 'Our Export Process',
     processSubtitle: 'Seamless journey from inquiry to delivery',
@@ -78,7 +82,7 @@ aboutHeadingLine2: 'Global Markets',
     logisticsStepDesc: 'Arrange shipping',
     delivery: 'Delivery',
     deliveryDesc: 'Timely delivery',
-    
+
     // Imports Section
     importsTitle: 'What We Import',
     importsSubtitle: 'Quality materials for industrial needs',
@@ -90,16 +94,16 @@ aboutHeadingLine2: 'Global Markets',
     copperScrapDesc: 'Premium copper scrap for industries',
     machinery: 'Machinery',
     machineryDesc: 'Industrial machinery and equipment',
-    
+
     // Global Reach
     globalTitle: 'Global Reach',
     globalSubtitle: 'Serving 50+ countries worldwide',
     globalDescription: 'From Asia to Europe, Americas to Africa, we deliver quality products across continents',
-    
+
     // Testimonials
     testimonialsTitle: 'What Our Clients Say',
     testimonialsSubtitle: 'Trusted by businesses worldwide',
-    
+
     // Contact Section
     contactTitle: 'Get In Touch',
     contactSubtitle: 'Let\'s discuss how we can serve your needs',
@@ -110,12 +114,12 @@ aboutHeadingLine2: 'Global Markets',
     phone: 'Phone',
     location: 'Location',
     india: 'India',
-    
+
     // Footer
     quickLinks: 'Quick Links',
     followUs: 'Follow Us',
     copyright: '© 2026 Global Sea Links. All rights reserved.',
-    
+
     // Contact Form
     fullName: 'Full Name',
     companyName: 'Company Name',
@@ -138,7 +142,7 @@ aboutHeadingLine2: 'Global Markets',
     messageSent: 'Your message has been sent successfully!',
     messageFailed: 'Failed to send message. Please try again.',
     networkError: 'Network error. Please check your connection and try again.',
-    
+
     // Form Validation Messages
     fullNameRequired: 'Full name is required',
     fullNameMin: 'Full name must be at least 2 characters',
@@ -157,10 +161,10 @@ aboutHeadingLine2: 'Global Markets',
     instantResponse: 'Get instant response to your queries',
     chatOnWhatsApp: 'Chat on WhatsApp',
     ourLocation: 'Our Location',
-    
+
     // Certifications
     trustedVerified: 'Trusted & Verified',
-    globalCertifications: 'Global Certifications & Compliance',
+    globalCertifications: 'Certifications & Compliance',
     certificationSubtitle: 'Meeting international export standards with verified quality assurance',
     certificationCommitment: 'Our commitment to quality is backed by internationally recognized certifications, ensuring every shipment meets the highest standards of safety and excellence.',
     apedaCertified: 'APEDA Certified',
@@ -175,7 +179,7 @@ aboutHeadingLine2: 'Global Markets',
     organicCertified: 'Organic Certified',
     halalCertified: 'Halal Certified',
     globalTradeVerified: 'Global Trade Verified',
-    
+
     // Product Details Page
     backToHome: 'Back to Home',
     viewFullDetails: 'View Full Details',
@@ -190,14 +194,14 @@ aboutHeadingLine2: 'Global Markets',
     contactToday: 'Contact us today for pricing, samples, and bulk orders',
     whatsappInquiry: 'WhatsApp Inquiry',
     contactForm: 'Contact Form',
-    
+
     // Navbar Language Selector
     selectLanguage: 'Select Language',
     english: 'English',
     arabic: 'العربية',
     french: 'Français',
     spanish: 'Español',
-    
+
     // Common UI
     learnMore: 'Learn More',
     getStarted: 'Get Started',
@@ -209,7 +213,7 @@ aboutHeadingLine2: 'Global Markets',
     loading: 'Loading...',
     error: 'Error',
     success: 'Success',
-    
+
     // Placeholders
     enterFullName: 'Your full name',
     enterCompanyName: 'Your company name',
@@ -217,15 +221,15 @@ aboutHeadingLine2: 'Global Markets',
     enterPhone: '+1 234 567 8900',
     enterCountry: 'Your country',
     enterMessage: 'Please provide details about your requirements, quantities, and any specific questions...',
-    
+
     // About Section - Additional
     whyChooseUs: 'About Us',
     deliveringPremium: 'Delivering Premium Agro Products to',
     globalMarkets: 'Global Markets',
-    
+
     // Imports Section
     whatWeImport: 'What We Import',
-    
+
     // Partner Section
     partnershipOpportunities: 'Partnership Opportunities',
     partnerWithUs: 'Partner With Us',
@@ -240,55 +244,55 @@ aboutHeadingLine2: 'Global Markets',
     businessPartnership: 'Business Partnership',
     activePartners: 'Active Partners',
     globalStandards: 'Global Standards',
-    
+
     // Footer
     footerDescription: 'Connecting global markets with quality agro products and industrial materials.',
     connectWithUsSocial: 'Connect with us on social media for updates and news.',
     allRightsReserved: 'All rights reserved',
     privacyPolicy: 'Privacy Policy',
     termsOfService: 'Terms of Service',
-    
+
     // Product Detail Page - Titles and Subtitles
     premiumBasmatiRice: 'Premium Basmati Rice',
     extraLongGrainAromatic: 'Extra Long Grain | Aromatic | Export Quality',
     basmatiRiceDetailDesc: 'Our premium Basmati rice is sourced from the finest farms in India, known for its exceptional aroma, extra-long grains, and superior quality. Perfect for international markets demanding the best.',
-    
+
     premiumCattleFeed: 'Premium Cattle Feed',
     nutritiousBalancedQuality: 'Nutritious | Balanced | High Quality',
     cattleFeedDetailDesc: 'Our comprehensive range of cattle feed products ensures optimal nutrition for livestock. From oil cakes to protein-rich meals, we provide everything needed for healthy cattle growth, improved milk production, and overall livestock productivity.',
-    
+
     premiumWheat: 'Premium Wheat',
     highQualityExportGrade: 'High Quality | Export Grade | Multiple Varieties',
     wheatDetailDesc: 'Export quality wheat sourced from the best farms. Our wheat meets international standards and is perfect for flour mills, bakeries, and food processing industries.',
-    
+
     indianSpices: 'Indian Spices',
     aromaticPurePremium: 'Aromatic | Pure | Premium Quality',
     spicesDetailDesc: 'Authentic Indian spices with rich aroma and flavor. Our spices are carefully selected, processed, and packed to retain their natural essence and quality.',
-    
+
     nonBasmatiRiceTitle: 'Non-Basmati Rice',
     highQualityNutritiousVersatile: 'High Quality | Nutritious | Versatile',
     nonBasmatiRiceDetailDesc: 'High-quality non-Basmati rice varieties suitable for daily consumption and various culinary applications. Our rice is carefully processed to maintain its natural nutrients and quality.',
-    
+
     yellowMaizeTitle: 'Yellow Maize',
     premiumQualityHighYield: 'Premium Quality | High Yield | Multi-Purpose',
     maizeDetailDesc: 'Premium quality yellow maize, ideal for animal feed, food processing, and industrial applications. Our maize is sourced from the best farms and processed to meet international standards.',
-    
+
     premiumChickpeasTitle: 'Premium Chickpeas',
     nutritiousHighProteinExport: 'Nutritious | High Protein | Export Quality',
     chickpeasDetailDesc: 'Premium quality chickpeas rich in protein and essential nutrients. Perfect for various culinary applications and export markets.',
-    
+
     corianderSeedsTitle: 'Coriander Seeds',
     aromaticPurePremiumQuality: 'Aromatic | Pure | Premium Quality',
     corianderDetailDesc: 'Fresh and aromatic coriander seeds with rich flavor. Our coriander is carefully selected and processed to retain its natural aroma and quality.',
-    
+
     premiumSoyabeanTitle: 'Premium Soyabean',
     highProteinNutritiousExport: 'High Protein | Nutritious | Export Quality',
     soyabeanDetailDesc: 'Premium quality soyabean rich in protein and essential nutrients. Perfect for oil extraction, food processing, and animal feed applications.',
-    
+
     freshOnionsTitle: 'Fresh Onions',
     premiumQualityFreshExport: 'Premium Quality | Fresh | Export Grade',
     onionsDetailDesc: 'Fresh and high-quality onions sourced from the best farms. Available in various sizes and varieties for domestic and international markets.',
-    
+
     // Cattle Feed Varieties
     cottonseedOilCake: 'Cottonseed Oil Cake',
     cottonseedDesc: 'A high-protein feed ingredient that supports milk production and overall cattle health. Rich in fiber and essential nutrients.',
@@ -312,7 +316,7 @@ aboutHeadingLine2: 'Global Markets',
     soyabeanMealDesc: 'Premium protein source widely used to enhance milk production and overall livestock growth.',
     baledWheatStraw: 'Baled Wheat Straw',
     baledStrawDesc: 'Our wheat straw bales are clean, well-dried, and ideal for livestock feed and bedding.',
-    
+
     // Basmati Varieties
     basmati1121: '1121 Basmati',
     basmati1121Desc: 'Extra long grain with excellent elongation after cooking',
@@ -322,7 +326,7 @@ aboutHeadingLine2: 'Global Markets',
     basmati1401Desc: 'Good length with reliable quality for export',
     basmati1509: '1509 Basmati',
     basmati1509Desc: 'Early crop, cost-effective with good grain length',
-    
+
     // Wheat Varieties
     durumWheat: 'Durum Wheat',
     durumWheatDesc: 'High protein content, ideal for pasta',
@@ -330,7 +334,7 @@ aboutHeadingLine2: 'Global Markets',
     hardRedWheatDesc: 'Perfect for bread making',
     softWheat: 'Soft Wheat',
     softWheatDesc: 'Ideal for cakes and pastries',
-    
+
     // Spice Varieties
     turmericPowder: 'Turmeric Powder',
     turmericDesc: 'Pure and vibrant yellow color',
@@ -340,7 +344,7 @@ aboutHeadingLine2: 'Global Markets',
     corianderSeedsDesc: 'Fresh and aromatic',
     cuminSeeds: 'Cumin Seeds',
     cuminDesc: 'Rich flavor and aroma',
-    
+
     // Product Features
     highProteinContent: 'High Protein Content',
     richInFiber: 'Rich in Fiber',
@@ -371,7 +375,7 @@ aboutHeadingLine2: 'Global Markets',
     cleanWellDried: 'Clean & Well-Dried',
     idealForBedding: 'Ideal for Bedding',
     livestockFeed: 'Livestock Feed',
-    
+
     // Grain Specifications
     length: 'Length',
     purity: 'Purity',
@@ -401,14 +405,14 @@ aboutHeadingLine2: 'Global Markets',
     uniform: 'Uniform',
     fresh: 'Fresh',
     clean: 'Clean',
-    
+
     // Product Not Found
     productNotFound: 'Product not found',
     goBackHome: 'Go Back Home',
     sendInquiryBtn: 'Send Inquiry',
     contactUsBtn: 'Contact Us',
   },
-  
+
   ar: {
     // Navbar
     home: 'الرئيسية',
@@ -417,39 +421,43 @@ aboutHeadingLine2: 'Global Markets',
     process: 'العملية',
     imports: 'الواردات',
     contact: 'اتصل بنا',
-    
+
     // Hero Section
     heroHeading: 'ربط الأسواق العالمية بمنتجات زراعية عالية الجودة',
     heroSubtext: 'مورد وموزع موثوق لأعلاف الماشية والسلع الزراعية',
     exploreProducts: 'استكشف المنتجات',
     contactUs: 'اتصل بنا',
-    
+
     // About Section
     aboutTitle: 'لماذا تختار Global Sea Links',
-    aboutDescription: 'في Global Sea Links، نفخر بكوننا موردًا وموزعًا موثوقًا لأعلاف الماشية والمنتجات الزراعية عالية الجودة. مع التركيز القوي على التغذية وضمان الجودة والاتساق، تم تصميم منتجاتنا لدعم إنتاجية أفضل وماشية أكثر صحة وزراعة مستدامة. نتعامل أيضًا في مجموعة واسعة من السلع، بما في ذلك الحبوب ومختلف المنتجات الزراعية، ونقدم خدمات التوريد والمصادر المخصصة المصممة لتلبية المتطلبات المحددة للمشترين. إن التزامنا بالجودة والشفافية والتسليم في الوقت المناسب يضمن الثقة والرضا على المدى الطويل في الأسواق العالمية.',
+    aboutDescription: `جلوبال سي لينكس هي شركة هندية متخصصة في التصدير والتوريد، وتوفر السلع الزراعية ومكونات الأعلاف للمشترين الدوليين.
+
+نعمل مع شبكة من الشركات المصنعة والمعالجة والموردين الموثوقين في مختلف أنحاء الهند لتوفير المنتجات وفقًا للمواصفات المطلوبة من عملائنا، ومعايير الجودة ومتطلبات التعبئة والتغليف.
+
+تشمل مجموعة منتجاتنا كسب بذور القطن، وكسب الفول السوداني، وDDGS، وDORB، وكسب فول الصويا، ونخالة القمح، والذرة الصفراء، والبقوليات، والأرز وغيرها من السلع الزراعية.
+
+نركز على التوريد الموثوق، وجودة المنتجات، والتواصل الشفاف، والتنسيق في الوقت المناسب للشحنات.وقبل الشحن، ننسق مواصفات المنتجات والوثائق والتعبئة ومتطلبات الجودة بين المشتري والمورد.
+
+سواء كنت بحاجة إلى توريد منتظم أو حل توريد مخصص، فإن هدفنا هو جعل عملية الشراء من الهند بسيطة وشفافة وموثوقة.`,
     assuredQuality: 'جودة مضمونة',
     assuredQualityDesc: 'يخضع كل طلب لمراقبة جودة صارمة واختبارات معملية. نتبع المعايير الدولية بما في ذلك الامتثال لـ ISO و FSSAI و APEDA في كل مرحلة.',
     exportDoc: 'وثائق تصدير كاملة',
     exportDocDesc: 'من شهادات الصحة النباتية إلى التبخير وبوليصة الشحن والتخليص الجمركي - نتعامل مع عملية التوثيق الكاملة للتصدير بسلاسة.',
-    countries: 'وصول عالمي للسوق',
-    countriesDesc: 'تمتد شبكة التصدير القوية لدينا إلى أكثر من 50 دولة بما في ذلك الشرق الأوسط وجنوب شرق آسيا وأفريقيا وأوروبا والأمريكتين.',
     logistics: 'لوجستيات موثوقة',
     logisticsDesc: 'نتعاون مع شركاء شحن موثوقين لشحنات FCL و LCL، مما يضمن التسليم السلس مع دعم التتبع في الوقت الفعلي.',
-    certifiedOrganic: 'منتجات عضوية معتمدة',
-    certifiedOrganicDesc: 'نقدم مجموعة واسعة من المنتجات العضوية المعتمدة مع شهادات NPOP و NOP (USDA)، مثالية للأسواق الدولية المتميزة.',
     directFarm: 'شراء مباشر من المزرعة',
     directFarmDesc: 'نحصل مباشرة من أكثر من 500 مجموعة مزارعين في جميع أنحاء الهند، مما يلغي الوسطاء ويحافظ على إمكانية التتبع الكاملة من المزرعة إلى الشحن.',
     competitive: 'أسعار تنافسية',
     competitiveDesc: 'يتيح لنا نموذج المصادر المباشرة تقديم أسعار FOB و CIF و CFR تنافسية للغاية مع عروض أسعار واضحة وسريعة.',
     featureBadge: 'لماذا تختار GloLinks',
-strengthsBadge: 'نقاط قوتنا',
-trustTitle: 'لماذا يثق المشترون العالميون بنا',
-trustSubtitle: 'توريد متميز، لوجستيات سلسة، وتميز تصديري موثوق عالميًا.',
-trustedPartner: 'شريك تصدير عالمي موثوق',
-servingCountries: 'نخدم أكثر من 50 دولة حول العالم',
-certifiedOrganicShort: 'عضوي معتمد',
-aboutHeadingLine1: 'توصيل المنتجات الزراعية الممتازة إلى',
-aboutHeadingLine2: 'الأسواق العالمية',
+    strengthsBadge: 'نقاط قوتنا',
+    trustTitle: 'لماذا يثق المشترون العالميون بنا',
+    trustSubtitle: 'توريد متميز، لوجستيات سلسة، وتميز تصديري موثوق عالميًا.',
+    trustedPartner: 'شريك تصدير عالمي موثوق',
+    servingCountries: 'نخدم أكثر من 50 دولة حول العالم',
+    certifiedOrganicShort: 'عضوي معتمد',
+    aboutHeadingLine1: 'توصيل المنتجات الزراعية الممتازة إلى',
+    aboutHeadingLine2: 'الأسواق العالمية',
     // Products Section
     productsTitle: 'منتجاتنا المميزة',
     productsSubtitle: 'سلع زراعية عالية الجودة للأسواق العالمية',
@@ -470,7 +478,7 @@ aboutHeadingLine2: 'الأسواق العالمية',
     onionsDesc: 'البصل هو واحد من أكثر السلع الزراعية الأساسية والمتداولة على نطاق واسع، ويقدر لنكهته القوية وعمره الطويل على الرف وتنوعه عبر المأكولات العالمية.',
     maize: 'ذرة',
     maizeDesc: 'ذرة صفراء عالية الجودة، مثالية لأعلاف الحيوانات ومعالجة الأغذية والتطبيقات الصناعية.',
-    
+
     // Export Process
     processTitle: 'عملية التصدير لدينا',
     processSubtitle: 'رحلة سلسة من الاستفسار إلى التسليم',
@@ -486,7 +494,7 @@ aboutHeadingLine2: 'الأسواق العالمية',
     logisticsStepDesc: 'ترتيب الشحن',
     delivery: 'التسليم',
     deliveryDesc: 'تسليم في الوقت المحدد',
-    
+
     // Imports Section
     importsTitle: 'ما نستورده',
     importsSubtitle: 'مواد عالية الجودة للاحتياجات الصناعية',
@@ -498,16 +506,16 @@ aboutHeadingLine2: 'الأسواق العالمية',
     copperScrapDesc: 'خردة نحاس ممتازة للصناعات',
     machinery: 'الآلات',
     machineryDesc: 'الآلات والمعدات الصناعية',
-    
+
     // Global Reach
     globalTitle: 'الوصول العالمي',
     globalSubtitle: 'خدمة أكثر من 50 دولة في جميع أنحاء العالم',
     globalDescription: 'من آسيا إلى أوروبا، من الأمريكتين إلى أفريقيا، نقدم منتجات عالية الجودة عبر القارات',
-    
+
     // Testimonials
     testimonialsTitle: 'ماذا يقول عملاؤنا',
     testimonialsSubtitle: 'موثوق به من قبل الشركات في جميع أنحاء العالم',
-    
+
     // Contact Section
     contactTitle: 'ابق على تواصل',
     contactSubtitle: 'دعنا نناقش كيف يمكننا خدمة احتياجاتك',
@@ -518,12 +526,12 @@ aboutHeadingLine2: 'الأسواق العالمية',
     phone: 'الهاتف',
     location: 'الموقع',
     india: 'الهند',
-    
+
     // Footer
     quickLinks: 'روابط سريعة',
     followUs: 'تابعنا',
     copyright: '© 2026 Global Sea Links. جميع الحقوق محفوظة.',
-    
+
     // Contact Form
     fullName: 'الاسم الكامل',
     companyName: 'اسم الشركة',
@@ -546,7 +554,7 @@ aboutHeadingLine2: 'الأسواق العالمية',
     messageSent: 'تم إرسال رسالتك بنجاح!',
     messageFailed: 'فشل إرسال الرسالة. يرجى المحاولة مرة أخرى.',
     networkError: 'خطأ في الشبكة. يرجى التحقق من اتصالك والمحاولة مرة أخرى.',
-    
+
     // Form Validation Messages
     fullNameRequired: 'الاسم الكامل مطلوب',
     fullNameMin: 'يجب أن يكون الاسم الكامل حرفين على الأقل',
@@ -565,10 +573,10 @@ aboutHeadingLine2: 'الأسواق العالمية',
     instantResponse: 'احصل على رد فوري على استفساراتك',
     chatOnWhatsApp: 'الدردشة على WhatsApp',
     ourLocation: 'موقعنا',
-    
+
     // Certifications
     trustedVerified: 'موثوق ومعتمد',
-    globalCertifications: 'الشهادات والامتثال العالمي',
+    globalCertifications: 'اات والامتثال العالم',
     certificationSubtitle: 'تلبية معايير التصدير الدولية مع ضمان الجودة المعتمد',
     certificationCommitment: 'التزامنا بالجودة مدعوم بشهادات معترف بها دوليًا، مما يضمن أن كل شحنة تلبي أعلى معايير السلامة والتميز.',
     apedaCertified: 'معتمد من APEDA',
@@ -583,7 +591,7 @@ aboutHeadingLine2: 'الأسواق العالمية',
     organicCertified: 'عضوي معتمد',
     halalCertified: 'حلال معتمد',
     globalTradeVerified: 'التجارة العالمية معتمدة',
-    
+
     // Product Details Page
     backToHome: 'العودة إلى الصفحة الرئيسية',
     viewFullDetails: 'عرض التفاصيل الكاملة',
@@ -598,14 +606,14 @@ aboutHeadingLine2: 'الأسواق العالمية',
     contactToday: 'اتصل بنا اليوم للحصول على الأسعار والعينات والطلبات بالجملة',
     whatsappInquiry: 'استفسار WhatsApp',
     contactForm: 'نموذج الاتصال',
-    
+
     // Navbar Language Selector
     selectLanguage: 'اختر اللغة',
     english: 'English',
     arabic: 'العربية',
     french: 'Français',
     spanish: 'Español',
-    
+
     // Common UI
     learnMore: 'اعرف المزيد',
     getStarted: 'ابدأ',
@@ -617,7 +625,7 @@ aboutHeadingLine2: 'الأسواق العالمية',
     loading: 'جاري التحميل...',
     error: 'خطأ',
     success: 'نجاح',
-    
+
     // Placeholders
     enterFullName: 'اسمك الكامل',
     enterCompanyName: 'اسم شركتك',
@@ -625,15 +633,15 @@ aboutHeadingLine2: 'الأسواق العالمية',
     enterPhone: '+966 234 567 8900',
     enterCountry: 'بلدك',
     enterMessage: 'يرجى تقديم تفاصيل حول متطلباتك والكميات وأي أسئلة محددة...',
-    
+
     // About Section - Additional
     whyChooseUs: 'من نحن',
     deliveringPremium: 'توصيل المنتجات الزراعية الممتازة إلى',
     globalMarkets: 'الأسواق العالمية',
-    
+
     // Imports Section
     whatWeImport: 'ما نستورده',
-    
+
     // Partner Section
     partnershipOpportunities: 'فرص الشراكة',
     partnerWithUs: 'شارك معنا',
@@ -648,55 +656,55 @@ aboutHeadingLine2: 'الأسواق العالمية',
     businessPartnership: 'شراكة تجارية',
     activePartners: 'شركاء نشطون',
     globalStandards: 'معايير عالمية',
-    
+
     // Footer
     footerDescription: 'ربط الأسواق العالمية بمنتجات زراعية عالية الجودة ومواد صناعية.',
     connectWithUsSocial: 'تواصل معنا على وسائل التواصل الاجتماعي للحصول على التحديثات والأخبار.',
     allRightsReserved: 'جميع الحقوق محفوظة',
     privacyPolicy: 'سياسة الخصوصية',
     termsOfService: 'شروط الخدمة',
-    
+
     // Product Detail Page - Titles and Subtitles
     premiumBasmatiRice: 'أرز بسمتي ممتاز',
     extraLongGrainAromatic: 'حبوب طويلة جدًا | عطري | جودة التصدير',
     basmatiRiceDetailDesc: 'يتم الحصول على أرز البسمتي الممتاز من أفضل المزارع في الهند، المعروفة برائحتها الاستثنائية وحبوبها الطويلة جدًا والجودة الفائقة. مثالي للأسواق الدولية التي تطلب الأفضل.',
-    
+
     premiumCattleFeed: 'علف ماشية ممتاز',
     nutritiousBalancedQuality: 'مغذي | متوازن | جودة عالية',
     cattleFeedDetailDesc: 'تضمن مجموعتنا الشاملة من منتجات علف الماشية التغذية المثلى للماشية. من كعك الزيت إلى الوجبات الغنية بالبروتين، نوفر كل ما هو مطلوب لنمو صحي للماشية وتحسين إنتاج الحليب والإنتاجية الشاملة للماشية.',
-    
+
     premiumWheat: 'قمح ممتاز',
     highQualityExportGrade: 'جودة عالية | درجة التصدير | أصناف متعددة',
     wheatDetailDesc: 'قمح بجودة التصدير من أفضل المزارع. يلبي قمحنا المعايير الدولية ومثالي لمطاحن الدقيق والمخابز وصناعات معالجة الأغذية.',
-    
+
     indianSpices: 'التوابل الهندية',
     aromaticPurePremium: 'عطري | نقي | جودة ممتازة',
     spicesDetailDesc: 'توابل هندية أصيلة برائحة ونكهة غنية. يتم اختيار توابلنا ومعالجتها وتعبئتها بعناية للحفاظ على جوهرها الطبيعي وجودتها.',
-    
+
     nonBasmatiRiceTitle: 'أرز غير بسمتي',
     highQualityNutritiousVersatile: 'جودة عالية | مغذي | متعدد الاستخدامات',
     nonBasmatiRiceDetailDesc: 'أصناف أرز غير بسمتي عالية الجودة مناسبة للاستهلاك اليومي والتطبيقات الطهي المختلفة. تتم معالجة أرزنا بعناية للحفاظ على عناصره الغذائية الطبيعية وجودته.',
-    
+
     yellowMaizeTitle: 'ذرة صفراء',
     premiumQualityHighYield: 'جودة ممتازة | إنتاجية عالية | متعدد الأغراض',
     maizeDetailDesc: 'ذرة صفراء عالية الجودة، مثالية لأعلاف الحيوانات ومعالجة الأغذية والتطبيقات الصناعية. يتم الحصول على ذرتنا من أفضل المزارع ومعالجتها لتلبية المعايير الدولية.',
-    
+
     premiumChickpeasTitle: 'حمص ممتاز',
     nutritiousHighProteinExport: 'مغذي | بروتين عالي | جودة التصدير',
     chickpeasDetailDesc: 'حمص عالي الجودة غني بالبروتين والعناصر الغذائية الأساسية. مثالي لمختلف التطبيقات الطهي وأسواق التصدير.',
-    
+
     corianderSeedsTitle: 'بذور الكزبرة',
     aromaticPurePremiumQuality: 'عطري | نقي | جودة ممتازة',
     corianderDetailDesc: 'بذور كزبرة طازجة وعطرية بنكهة غنية. يتم اختيار ومعالجة كزبرتنا بعناية للحفاظ على رائحتها الطبيعية وجودتها.',
-    
+
     premiumSoyabeanTitle: 'فول صويا ممتاز',
     highProteinNutritiousExport: 'بروتين عالي | مغذي | جودة التصدير',
     soyabeanDetailDesc: 'فول صويا عالي الجودة غني بالبروتين والعناصر الغذائية الأساسية. مثالي لاستخراج الزيت ومعالجة الأغذية وتطبيقات علف الحيوانات.',
-    
+
     freshOnionsTitle: 'بصل طازج',
     premiumQualityFreshExport: 'جودة ممتازة | طازج | درجة التصدير',
     onionsDetailDesc: 'بصل طازج وعالي الجودة من أفضل المزارع. متوفر بأحجام وأصناف مختلفة للأسواق المحلية والدولية.',
-    
+
     // Cattle Feed Varieties
     cottonseedOilCake: 'كعكة زيت بذور القطن',
     cottonseedDesc: 'مكون علف عالي البروتين يدعم إنتاج الحليب والصحة العامة للماشية. غني بالألياف والعناصر الغذائية الأساسية.',
@@ -720,7 +728,7 @@ aboutHeadingLine2: 'الأسواق العالمية',
     soyabeanMealDesc: 'مصدر بروتين ممتاز يستخدم على نطاق واسع لتعزيز إنتاج الحليب والنمو الشامل للماشية.',
     baledWheatStraw: 'قش القمح المربوط',
     baledStrawDesc: 'بالات قش القمح لدينا نظيفة ومجففة جيدًا ومثالية لعلف الماشية والفراش.',
-    
+
     // Basmati Varieties
     basmati1121: 'بسمتي 1121',
     basmati1121Desc: 'حبوب طويلة جدًا مع استطالة ممتازة بعد الطهي',
@@ -730,7 +738,7 @@ aboutHeadingLine2: 'الأسواق العالمية',
     basmati1401Desc: 'طول جيد مع جودة موثوقة للتصدير',
     basmati1509: 'بسمتي 1509',
     basmati1509Desc: 'محصول مبكر، فعال من حيث التكلفة مع طول حبوب جيد',
-    
+
     // Wheat Varieties
     durumWheat: 'قمح قاسي',
     durumWheatDesc: 'محتوى بروتين عالي، مثالي للمعكرونة',
@@ -738,7 +746,7 @@ aboutHeadingLine2: 'الأسواق العالمية',
     hardRedWheatDesc: 'مثالي لصنع الخبز',
     softWheat: 'قمح ناعم',
     softWheatDesc: 'مثالي للكعك والمعجنات',
-    
+
     // Spice Varieties
     turmericPowder: 'مسحوق الكركم',
     turmericDesc: 'نقي ولون أصفر نابض بالحياة',
@@ -748,7 +756,7 @@ aboutHeadingLine2: 'الأسواق العالمية',
     corianderSeedsDesc: 'طازجة وعطرية',
     cuminSeeds: 'بذور الكمون',
     cuminDesc: 'نكهة ورائحة غنية',
-    
+
     // Product Features
     highProteinContent: 'محتوى بروتين عالي',
     richInFiber: 'غني بالألياف',
@@ -779,7 +787,7 @@ aboutHeadingLine2: 'الأسواق العالمية',
     cleanWellDried: 'نظيف ومجفف جيدًا',
     idealForBedding: 'مثالي للفراش',
     livestockFeed: 'علف الماشية',
-    
+
     // Grain Specifications
     length: 'الطول',
     purity: 'النقاء',
@@ -809,14 +817,14 @@ aboutHeadingLine2: 'الأسواق العالمية',
     uniform: 'موحد',
     fresh: 'طازج',
     clean: 'نظيف',
-    
+
     // Product Not Found
     productNotFound: 'المنتج غير موجود',
     goBackHome: 'العودة إلى الصفحة الرئيسية',
     sendInquiryBtn: 'إرسال استفسار',
     contactUsBtn: 'اتصل بنا',
   },
-  
+
   fr: {
     // Navbar
     home: 'Accueil',
@@ -825,39 +833,43 @@ aboutHeadingLine2: 'الأسواق العالمية',
     process: 'Processus',
     imports: 'Importations',
     contact: 'Contact',
-    
+
     // Hero Section
     heroHeading: 'Connecter les marchés mondiaux avec des produits agricoles de qualité',
     heroSubtext: 'Fournisseur et exportateur de confiance d\'aliments pour bétail et de produits agricoles',
     exploreProducts: 'Explorer les produits',
     contactUs: 'Contactez-nous',
-    
+
     // About Section
     aboutTitle: 'Pourquoi choisir Global Sea Links',
-    aboutDescription: 'Chez Global Sea Links, nous sommes fiers d\'être un fournisseur et exportateur fiable d\'aliments pour bétail et de produits agricoles de qualité supérieure. Avec un fort accent sur la nutrition, l\'assurance qualité et la cohérence, nos produits sont conçus pour soutenir un meilleur rendement, un bétail plus sain et une agriculture durable. Nous traitons également une large gamme de produits de base, y compris les céréales et divers produits agricoles, et fournissons des services d\'approvisionnement et de fourniture personnalisés adaptés aux exigences spécifiques des acheteurs. Notre engagement envers la qualité, la transparence et la livraison dans les délais garantit une confiance et une satisfaction à long terme sur les marchés mondiaux.',
+    aboutDescription: `Global Sea Links est une entreprise indienne spécialisée dans l’exportation et l’approvisionnement, fournissant des produits agricoles et des ingrédients pour l’alimentation animale à des acheteurs internationaux.
+
+Nous travaillons avec un réseau de fabricants, transformateurs et fournisseurs de confiance à travers l’Inde afin de proposer des produits conformes aux spécifications, aux normes de qualité et aux exigences d’emballage de nos clients.
+
+Notre gamme de produits comprend notamment le tourteau de coton, le tourteau d’arachide, les DDGS, le DORB, le tourteau de soja, le son de blé, le maïs jaune, les légumineuses, le riz et d’autres produits agricoles.
+
+Nous accordons une grande importance à un approvisionnement fiable, à la qualité des produits, à une communication transparente et à une coordination ponctuelle des expéditions.Avant l’expédition, nous coordonnons les spécifications des produits, la documentation, l’emballage et les exigences de qualité avec l’acheteur et le fournisseur.
+
+Que vous ayez besoin d’un approvisionnement régulier ou d’une solution d’approvisionnement personnalisée, notre objectif est de rendre l’achat depuis l’Inde simple, transparent et fiable.`,
     assuredQuality: 'Qualité assurée',
     assuredQualityDesc: 'Chaque commande fait l\'objet d\'un contrôle qualité strict et de tests en laboratoire. Nous suivons les normes internationales, y compris la conformité ISO, FSSAI et APEDA à chaque étape.',
     exportDoc: 'Documentation d\'exportation complète',
     exportDocDesc: 'Des certificats phytosanitaires à la fumigation, au connaissement et au dédouanement - nous gérons l\'ensemble du processus de documentation d\'exportation en douceur.',
-    countries: 'Portée mondiale du marché',
-    countriesDesc: 'Notre solide réseau d\'exportation s\'étend sur plus de 50 pays, notamment au Moyen-Orient, en Asie du Sud-Est, en Afrique, en Europe et dans les Amériques.',
     logistics: 'Logistique fiable',
     logisticsDesc: 'Nous collaborons avec des partenaires de fret de confiance pour les expéditions FCL et LCL, assurant une livraison fluide avec un support de suivi en temps réel.',
-    certifiedOrganic: 'Produits biologiques certifiés',
-    certifiedOrganicDesc: 'Nous offrons un large portefeuille de produits biologiques certifiés avec les certifications NPOP et NOP (USDA), idéal pour les marchés internationaux premium.',
     directFarm: 'Approvisionnement direct à la ferme',
     directFarmDesc: 'Nous nous approvisionnons directement auprès de plus de 500 groupes d\'agriculteurs à travers l\'Inde, éliminant les intermédiaires et maintenant une traçabilité complète de la ferme à l\'expédition.',
     competitive: 'Prix compétitifs',
     competitiveDesc: 'Notre modèle d\'approvisionnement direct nous permet d\'offrir des prix FOB, CIF et CFR très compétitifs avec des devis clairs et rapides.',
     featureBadge: 'Pourquoi choisir GloLinks',
-strengthsBadge: 'Nos Forces',
-trustTitle: 'Pourquoi les acheteurs mondiaux nous font confiance',
-trustSubtitle: 'Approvisionnement premium, logistique fluide et excellence exportatrice reconnue mondialement.',
-trustedPartner: 'Partenaire mondial d’exportation fiable',
-servingCountries: 'Présent dans plus de 50 pays',
-certifiedOrganicShort: 'Biologique Certifié',
-aboutHeadingLine1: 'Livrer des produits agricoles premium aux',
-aboutHeadingLine2: 'marchés mondiaux',
+    strengthsBadge: 'Nos Forces',
+    trustTitle: 'Pourquoi les acheteurs mondiaux nous font confiance',
+    trustSubtitle: 'Approvisionnement premium, logistique fluide et excellence exportatrice reconnue mondialement.',
+    trustedPartner: 'Partenaire mondial d’exportation fiable',
+    servingCountries: 'Présent dans plus de 50 pays',
+    certifiedOrganicShort: 'Biologique Certifié',
+    aboutHeadingLine1: 'Livrer des produits agricoles premium aux',
+    aboutHeadingLine2: 'marchés mondiaux',
     // Products Section
     productsTitle: 'Nos produits premium',
     productsSubtitle: 'Produits agricoles de qualité pour les marchés mondiaux',
@@ -878,7 +890,7 @@ aboutHeadingLine2: 'marchés mondiaux',
     onionsDesc: 'Les oignons sont l\'un des produits agricoles les plus essentiels et les plus échangés, appréciés pour leur saveur forte, leur longue durée de conservation et leur polyvalence dans les cuisines mondiales.',
     maize: 'Maïs',
     maizeDesc: 'Maïs jaune de qualité supérieure, idéal pour l\'alimentation animale, la transformation alimentaire et les applications industrielles.',
-    
+
     // Export Process
     processTitle: 'Notre processus d\'exportation',
     processSubtitle: 'Parcours fluide de la demande à la livraison',
@@ -894,7 +906,7 @@ aboutHeadingLine2: 'marchés mondiaux',
     logisticsStepDesc: 'Organisation de l\'expédition',
     delivery: 'Livraison',
     deliveryDesc: 'Livraison dans les délais',
-    
+
     // Imports Section
     importsTitle: 'Ce que nous importons',
     importsSubtitle: 'Matériaux de qualité pour les besoins industriels',
@@ -906,16 +918,16 @@ aboutHeadingLine2: 'marchés mondiaux',
     copperScrapDesc: 'Ferraille de cuivre premium pour les industries',
     machinery: 'Machinerie',
     machineryDesc: 'Machines et équipements industriels',
-    
+
     // Global Reach
     globalTitle: 'Portée mondiale',
     globalSubtitle: 'Au service de plus de 50 pays dans le monde',
     globalDescription: 'De l\'Asie à l\'Europe, des Amériques à l\'Afrique, nous livrons des produits de qualité sur tous les continents',
-    
+
     // Testimonials
     testimonialsTitle: 'Ce que disent nos clients',
     testimonialsSubtitle: 'Approuvé par des entreprises du monde entier',
-    
+
     // Contact Section
     contactTitle: 'Entrer en contact',
     contactSubtitle: 'Discutons de la façon dont nous pouvons répondre à vos besoins',
@@ -926,12 +938,12 @@ aboutHeadingLine2: 'marchés mondiaux',
     phone: 'Téléphone',
     location: 'Emplacement',
     india: 'Inde',
-    
+
     // Footer
     quickLinks: 'Liens rapides',
     followUs: 'Suivez-nous',
     copyright: '© 2026 Global Sea Links. Tous droits réservés.',
-    
+
     // Contact Form
     fullName: 'Nom complet',
     companyName: 'Nom de l\'entreprise',
@@ -954,7 +966,7 @@ aboutHeadingLine2: 'marchés mondiaux',
     messageSent: 'Votre message a été envoyé avec succès!',
     messageFailed: 'Échec de l\'envoi du message. Veuillez réessayer.',
     networkError: 'Erreur réseau. Veuillez vérifier votre connexion et réessayer.',
-    
+
     // Form Validation Messages
     fullNameRequired: 'Le nom complet est requis',
     fullNameMin: 'Le nom complet doit contenir au moins 2 caractères',
@@ -973,10 +985,10 @@ aboutHeadingLine2: 'marchés mondiaux',
     instantResponse: 'Obtenez une réponse instantanée à vos questions',
     chatOnWhatsApp: 'Discuter sur WhatsApp',
     ourLocation: 'Notre emplacement',
-    
+
     // Certifications
     trustedVerified: 'Fiable et vérifié',
-    globalCertifications: 'Certifications et conformité mondiales',
+    globalCertifications: 'Certifications et conformité',
     certificationSubtitle: 'Répondre aux normes d\'exportation internationales avec une assurance qualité vérifiée',
     certificationCommitment: 'Notre engagement envers la qualité est soutenu par des certifications reconnues internationalement, garantissant que chaque expédition répond aux normes les plus élevées de sécurité et d\'excellence.',
     apedaCertified: 'Certifié APEDA',
@@ -991,7 +1003,7 @@ aboutHeadingLine2: 'marchés mondiaux',
     organicCertified: 'Biologique certifié',
     halalCertified: 'Halal certifié',
     globalTradeVerified: 'Commerce mondial vérifié',
-    
+
     // Product Details Page
     backToHome: 'Retour à l\'accueil',
     viewFullDetails: 'Voir tous les détails',
@@ -1006,14 +1018,14 @@ aboutHeadingLine2: 'marchés mondiaux',
     contactToday: 'Contactez-nous aujourd\'hui pour les prix, les échantillons et les commandes en gros',
     whatsappInquiry: 'Demande WhatsApp',
     contactForm: 'Formulaire de contact',
-    
+
     // Navbar Language Selector
     selectLanguage: 'Sélectionner la langue',
     english: 'English',
     arabic: 'العربية',
     french: 'Français',
     spanish: 'Español',
-    
+
     // Common UI
     learnMore: 'En savoir plus',
     getStarted: 'Commencer',
@@ -1025,7 +1037,7 @@ aboutHeadingLine2: 'marchés mondiaux',
     loading: 'Chargement...',
     error: 'Erreur',
     success: 'Succès',
-    
+
     // Placeholders
     enterFullName: 'Votre nom complet',
     enterCompanyName: 'Le nom de votre entreprise',
@@ -1033,15 +1045,15 @@ aboutHeadingLine2: 'marchés mondiaux',
     enterPhone: '+33 234 567 8900',
     enterCountry: 'Votre pays',
     enterMessage: 'Veuillez fournir des détails sur vos besoins, quantités et toute question spécifique...',
-    
+
     // About Section - Additional
     whyChooseUs: 'À propos de nous',
     deliveringPremium: 'Livrer des produits agricoles premium aux',
     globalMarkets: 'marchés mondiaux',
-    
+
     // Imports Section
     whatWeImport: 'Ce que nous importons',
-    
+
     // Partner Section
     partnershipOpportunities: 'Opportunités de partenariat',
     partnerWithUs: 'Partenaire avec nous',
@@ -1056,55 +1068,55 @@ aboutHeadingLine2: 'marchés mondiaux',
     businessPartnership: 'Partenariat commercial',
     activePartners: 'Partenaires actifs',
     globalStandards: 'Normes mondiales',
-    
+
     // Footer
     footerDescription: 'Connecter les marchés mondiaux avec des produits agricoles de qualité et des matériaux industriels.',
     connectWithUsSocial: 'Connectez-vous avec nous sur les réseaux sociaux pour les mises à jour et les actualités.',
     allRightsReserved: 'Tous droits réservés',
     privacyPolicy: 'Politique de confidentialité',
     termsOfService: 'Conditions d\'utilisation',
-    
+
     // Product Detail Page - Titles and Subtitles
     premiumBasmatiRice: 'Riz Basmati Premium',
     extraLongGrainAromatic: 'Grain Extra Long | Aromatique | Qualité Export',
     basmatiRiceDetailDesc: 'Notre riz Basmati premium provient des meilleures fermes d\'Inde, connues pour leur arôme exceptionnel, leurs grains extra-longs et leur qualité supérieure. Parfait pour les marchés internationaux exigeant le meilleur.',
-    
+
     premiumCattleFeed: 'Aliments pour Bétail Premium',
     nutritiousBalancedQuality: 'Nutritif | Équilibré | Haute Qualité',
     cattleFeedDetailDesc: 'Notre gamme complète de produits d\'alimentation pour bétail assure une nutrition optimale pour le bétail. Des tourteaux d\'huile aux repas riches en protéines, nous fournissons tout ce qui est nécessaire pour une croissance saine du bétail, une production laitière améliorée et une productivité globale du bétail.',
-    
+
     premiumWheat: 'Blé Premium',
     highQualityExportGrade: 'Haute Qualité | Qualité Export | Variétés Multiples',
     wheatDetailDesc: 'Blé de qualité export provenant des meilleures fermes. Notre blé répond aux normes internationales et est parfait pour les minoteries, les boulangeries et les industries de transformation alimentaire.',
-    
+
     indianSpices: 'Épices Indiennes',
     aromaticPurePremium: 'Aromatique | Pur | Qualité Premium',
     spicesDetailDesc: 'Épices indiennes authentiques avec un arôme et une saveur riches. Nos épices sont soigneusement sélectionnées, transformées et emballées pour conserver leur essence naturelle et leur qualité.',
-    
+
     nonBasmatiRiceTitle: 'Riz Non-Basmati',
     highQualityNutritiousVersatile: 'Haute Qualité | Nutritif | Polyvalent',
     nonBasmatiRiceDetailDesc: 'Variétés de riz non-Basmati de haute qualité adaptées à la consommation quotidienne et à diverses applications culinaires. Notre riz est soigneusement transformé pour maintenir ses nutriments naturels et sa qualité.',
-    
+
     yellowMaizeTitle: 'Maïs Jaune',
     premiumQualityHighYield: 'Qualité Premium | Haut Rendement | Multi-Usage',
     maizeDetailDesc: 'Maïs jaune de qualité premium, idéal pour l\'alimentation animale, la transformation alimentaire et les applications industrielles. Notre maïs provient des meilleures fermes et est transformé pour répondre aux normes internationales.',
-    
+
     premiumChickpeasTitle: 'Pois Chiches Premium',
     nutritiousHighProteinExport: 'Nutritif | Haute Protéine | Qualité Export',
     chickpeasDetailDesc: 'Pois chiches de qualité premium riches en protéines et en nutriments essentiels. Parfait pour diverses applications culinaires et marchés d\'exportation.',
-    
+
     corianderSeedsTitle: 'Graines de Coriandre',
     aromaticPurePremiumQuality: 'Aromatique | Pur | Qualité Premium',
     corianderDetailDesc: 'Graines de coriandre fraîches et aromatiques avec une saveur riche. Notre coriandre est soigneusement sélectionnée et transformée pour conserver son arôme naturel et sa qualité.',
-    
+
     premiumSoyabeanTitle: 'Soja Premium',
     highProteinNutritiousExport: 'Haute Protéine | Nutritif | Qualité Export',
     soyabeanDetailDesc: 'Soja de qualité premium riche en protéines et en nutriments essentiels. Parfait pour l\'extraction d\'huile, la transformation alimentaire et les applications d\'alimentation animale.',
-    
+
     freshOnionsTitle: 'Oignons Frais',
     premiumQualityFreshExport: 'Qualité Premium | Frais | Qualité Export',
     onionsDetailDesc: 'Oignons frais et de haute qualité provenant des meilleures fermes. Disponibles en différentes tailles et variétés pour les marchés nationaux et internationaux.',
-    
+
     // Cattle Feed Varieties
     cottonseedOilCake: 'Tourteau de Graines de Coton',
     cottonseedDesc: 'Un ingrédient alimentaire riche en protéines qui soutient la production laitière et la santé globale du bétail. Riche en fibres et en nutriments essentiels.',
@@ -1128,7 +1140,7 @@ aboutHeadingLine2: 'marchés mondiaux',
     soyabeanMealDesc: 'Source de protéines premium largement utilisée pour améliorer la production laitière et la croissance globale du bétail.',
     baledWheatStraw: 'Paille de Blé en Balles',
     baledStrawDesc: 'Nos balles de paille de blé sont propres, bien séchées et idéales pour l\'alimentation et la litière du bétail.',
-    
+
     // Basmati Varieties
     basmati1121: 'Basmati 1121',
     basmati1121Desc: 'Grain extra long avec une excellente élongation après cuisson',
@@ -1138,7 +1150,7 @@ aboutHeadingLine2: 'marchés mondiaux',
     basmati1401Desc: 'Bonne longueur avec une qualité fiable pour l\'exportation',
     basmati1509: 'Basmati 1509',
     basmati1509Desc: 'Récolte précoce, rentable avec une bonne longueur de grain',
-    
+
     // Wheat Varieties
     durumWheat: 'Blé Dur',
     durumWheatDesc: 'Teneur élevée en protéines, idéal pour les pâtes',
@@ -1146,7 +1158,7 @@ aboutHeadingLine2: 'marchés mondiaux',
     hardRedWheatDesc: 'Parfait pour la fabrication du pain',
     softWheat: 'Blé Tendre',
     softWheatDesc: 'Idéal pour les gâteaux et les pâtisseries',
-    
+
     // Spice Varieties
     turmericPowder: 'Poudre de Curcuma',
     turmericDesc: 'Pur et couleur jaune vif',
@@ -1156,7 +1168,7 @@ aboutHeadingLine2: 'marchés mondiaux',
     corianderSeedsDesc: 'Fraîches et aromatiques',
     cuminSeeds: 'Graines de Cumin',
     cuminDesc: 'Saveur et arôme riches',
-    
+
     // Product Features
     highProteinContent: 'Teneur Élevée en Protéines',
     richInFiber: 'Riche en Fibres',
@@ -1187,7 +1199,7 @@ aboutHeadingLine2: 'marchés mondiaux',
     cleanWellDried: 'Propre et Bien Séché',
     idealForBedding: 'Idéal pour la Litière',
     livestockFeed: 'Aliment pour Bétail',
-    
+
     // Grain Specifications
     length: 'Longueur',
     purity: 'Pureté',
@@ -1217,14 +1229,14 @@ aboutHeadingLine2: 'marchés mondiaux',
     uniform: 'Uniforme',
     fresh: 'Frais',
     clean: 'Propre',
-    
+
     // Product Not Found
     productNotFound: 'Produit non trouvé',
     goBackHome: 'Retour à l\'Accueil',
     sendInquiryBtn: 'Envoyer une Demande',
     contactUsBtn: 'Contactez-nous',
   },
-  
+
   es: {
     // Navbar
     home: 'Inicio',
@@ -1233,26 +1245,30 @@ aboutHeadingLine2: 'marchés mondiaux',
     process: 'Proceso',
     imports: 'Importaciones',
     contact: 'Contacto',
-    
+
     // Hero Section
     heroHeading: 'Conectando mercados globales con productos agrícolas de calidad',
     heroSubtext: 'Proveedor y exportador confiable de alimentos para ganado y productos agrícolas',
     exploreProducts: 'Explorar productos',
     contactUs: 'Contáctenos',
-    
+
     // About Section
     aboutTitle: 'Por qué elegir Global Sea Links',
-    aboutDescription: 'En Global Sea Links, nos enorgullecemos de ser un proveedor y exportador confiable de alimentos para ganado y productos agrícolas de primera calidad. Con un fuerte enfoque en nutrición, garantía de calidad y consistencia, nuestros productos están diseñados para apoyar un mejor rendimiento, ganado más saludable y agricultura sostenible. También comercializamos una amplia gama de productos básicos, incluidos granos y diversos productos agrícolas, y brindamos servicios de abastecimiento y suministro personalizados adaptados a los requisitos específicos de los compradores. Nuestro compromiso con la calidad, la transparencia y la entrega oportuna garantiza confianza y satisfacción a largo plazo en los mercados globales.',
+    aboutDescription: `Global Sea Links es una empresa con sede en India especializada en exportación y abastecimiento, que suministra productos agrícolas e ingredientes para alimentación animal a compradores internacionales.
+
+Trabajamos con una red de fabricantes, procesadores y proveedores de confianza en toda la India para obtener productos de acuerdo con las especificaciones, los parámetros de calidad y los requisitos de embalaje solicitados por nuestros clientes.
+
+Nuestra gama de productos incluye torta de semilla de algodón, torta de cacahuete, DDGS, DORB, harina de soja, salvado de trigo, maíz amarillo, legumbres, arroz y otros productos agrícolas.
+
+Nos enfocamos en un abastecimiento confiable, la calidad de los productos, una comunicación transparente y una coordinación puntual de los envíos.Antes del despacho, coordinamos las especificaciones del producto, la documentación, el embalaje y los requisitos de calidad con el comprador y el proveedor.
+
+Ya sea que necesite un suministro regular o una solución de abastecimiento personalizada, nuestro objetivo es hacer que la adquisición de productos desde India sea sencilla, transparente y confiable.`,
     assuredQuality: 'Calidad asegurada',
     assuredQualityDesc: 'Cada pedido se somete a un estricto control de calidad y pruebas de laboratorio. Seguimos estándares internacionales, incluido el cumplimiento de ISO, FSSAI y APEDA en cada etapa.',
     exportDoc: 'Documentación de exportación completa',
     exportDocDesc: 'Desde certificados fitosanitarios hasta fumigación, conocimiento de embarque y despacho de aduana: manejamos todo el proceso de documentación de exportación sin problemas.',
-    countries: 'Alcance mundial del mercado',
-    countriesDesc: 'Nuestra sólida red de exportación abarca más de 50 países, incluidos Medio Oriente, Sudeste Asiático, África, Europa y las Américas.',
     logistics: 'Logística confiable',
     logisticsDesc: 'Colaboramos con socios de carga confiables para envíos FCL y LCL, asegurando una entrega fluida con soporte de seguimiento en tiempo real.',
-    certifiedOrganic: 'Productos orgánicos certificados',
-    certifiedOrganicDesc: 'Ofrecemos una amplia cartera de productos orgánicos certificados con certificaciones NPOP y NOP (USDA), ideales para mercados internacionales premium.',
     directFarm: 'Adquisición directa de la granja',
     directFarmDesc: 'Obtenemos directamente de más de 500 grupos de agricultores en toda la India, eliminando intermediarios y manteniendo la trazabilidad completa desde la granja hasta el envío.',
     competitive: 'Precios competitivos',
@@ -1266,7 +1282,7 @@ aboutHeadingLine2: 'marchés mondiaux',
     certifiedOrganicShort: 'Orgánico certificado',
     aboutHeadingLine1: 'Entregando productos agrícolas premium a',
     aboutHeadingLine2: 'mercados globales',
-    
+
     // Products Section
     productsTitle: 'Nuestros productos premium',
     productsSubtitle: 'Productos agrícolas de calidad para mercados globales',
@@ -1287,7 +1303,7 @@ aboutHeadingLine2: 'marchés mondiaux',
     onionsDesc: 'Las cebollas son uno de los productos agrícolas más esenciales y comercializados, valoradas por su sabor fuerte, larga vida útil y versatilidad en las cocinas globales.',
     maize: 'Maíz',
     maizeDesc: 'Maíz amarillo de calidad premium, ideal para alimento animal, procesamiento de alimentos y aplicaciones industriales.',
-    
+
     // Export Process
     processTitle: 'Nuestro proceso de exportación',
     processSubtitle: 'Viaje fluido desde la consulta hasta la entrega',
@@ -1303,7 +1319,7 @@ aboutHeadingLine2: 'marchés mondiaux',
     logisticsStepDesc: 'Organizar envío',
     delivery: 'Entrega',
     deliveryDesc: 'Entrega oportuna',
-    
+
     // Imports Section
     importsTitle: 'Lo que importamos',
     importsSubtitle: 'Materiales de calidad para necesidades industriales',
@@ -1315,16 +1331,16 @@ aboutHeadingLine2: 'marchés mondiaux',
     copperScrapDesc: 'Chatarra de cobre premium para industrias',
     machinery: 'Maquinaria',
     machineryDesc: 'Maquinaria y equipos industriales',
-    
+
     // Global Reach
     globalTitle: 'Alcance global',
     globalSubtitle: 'Sirviendo a más de 50 países en todo el mundo',
     globalDescription: 'Desde Asia hasta Europa, de las Américas a África, entregamos productos de calidad en todos los continentes',
-    
+
     // Testimonials
     testimonialsTitle: 'Lo que dicen nuestros clientes',
     testimonialsSubtitle: 'Confiado por empresas de todo el mundo',
-    
+
     // Contact Section
     contactTitle: 'Ponerse en contacto',
     contactSubtitle: 'Hablemos de cómo podemos satisfacer sus necesidades',
@@ -1335,12 +1351,12 @@ aboutHeadingLine2: 'marchés mondiaux',
     phone: 'Teléfono',
     location: 'Ubicación',
     india: 'India',
-    
+
     // Footer
     quickLinks: 'Enlaces rápidos',
     followUs: 'Síguenos',
     copyright: '© 2026 Global Sea Links. Todos los derechos reservados.',
-    
+
     // Contact Form
     fullName: 'Nombre completo',
     companyName: 'Nombre de la empresa',
@@ -1363,7 +1379,7 @@ aboutHeadingLine2: 'marchés mondiaux',
     messageSent: '¡Su mensaje ha sido enviado con éxito!',
     messageFailed: 'Error al enviar el mensaje. Por favor, inténtelo de nuevo.',
     networkError: 'Error de red. Por favor, verifique su conexión e inténtelo de nuevo.',
-    
+
     // Form Validation Messages
     fullNameRequired: 'El nombre completo es requerido',
     fullNameMin: 'El nombre completo debe tener al menos 2 caracteres',
@@ -1382,10 +1398,10 @@ aboutHeadingLine2: 'marchés mondiaux',
     instantResponse: 'Obtenga respuesta instantánea a sus consultas',
     chatOnWhatsApp: 'Chatear en WhatsApp',
     ourLocation: 'Nuestra ubicación',
-    
+
     // Certifications
     trustedVerified: 'Confiable y verificado',
-    globalCertifications: 'Certificaciones y cumplimiento global',
+    globalCertifications: 'Certificaciones y cumplimiento',
     certificationSubtitle: 'Cumpliendo con los estándares de exportación internacionales con garantía de calidad verificada',
     certificationCommitment: 'Nuestro compromiso con la calidad está respaldado por certificaciones reconocidas internacionalmente, asegurando que cada envío cumpla con los más altos estándares de seguridad y excelencia.',
     apedaCertified: 'Certificado APEDA',
@@ -1400,7 +1416,7 @@ aboutHeadingLine2: 'marchés mondiaux',
     organicCertified: 'Orgánico certificado',
     halalCertified: 'Halal certificado',
     globalTradeVerified: 'Comercio global verificado',
-    
+
     // Product Details Page
     backToHome: 'Volver al inicio',
     viewFullDetails: 'Ver detalles completos',
@@ -1415,14 +1431,14 @@ aboutHeadingLine2: 'marchés mondiaux',
     contactToday: 'Contáctenos hoy para precios, muestras y pedidos al por mayor',
     whatsappInquiry: 'Consulta WhatsApp',
     contactForm: 'Formulario de contacto',
-    
+
     // Navbar Language Selector
     selectLanguage: 'Seleccionar idioma',
     english: 'English',
     arabic: 'العربية',
     french: 'Français',
     spanish: 'Español',
-    
+
     // Common UI
     learnMore: 'Aprende más',
     getStarted: 'Empezar',
@@ -1434,7 +1450,7 @@ aboutHeadingLine2: 'marchés mondiaux',
     loading: 'Cargando...',
     error: 'Error',
     success: 'Éxito',
-    
+
     // Placeholders
     enterFullName: 'Su nombre completo',
     enterCompanyName: 'El nombre de su empresa',
@@ -1442,15 +1458,15 @@ aboutHeadingLine2: 'marchés mondiaux',
     enterPhone: '+34 234 567 8900',
     enterCountry: 'Su país',
     enterMessage: 'Por favor proporcione detalles sobre sus requisitos, cantidades y cualquier pregunta específica...',
-    
+
     // About Section - Additional
     whyChooseUs: 'Sobre nosotros',
     deliveringPremium: 'Entregando productos agrícolas premium a',
     globalMarkets: 'mercados globales',
-    
+
     // Imports Section
     whatWeImport: 'Lo que importamos',
-    
+
     // Partner Section
     partnershipOpportunities: 'Oportunidades de asociación',
     partnerWithUs: 'Asóciese con nosotros',
@@ -1465,55 +1481,55 @@ aboutHeadingLine2: 'marchés mondiaux',
     businessPartnership: 'Asociación comercial',
     activePartners: 'Socios activos',
     globalStandards: 'Estándares globales',
-    
+
     // Footer
     footerDescription: 'Conectando mercados globales con productos agrícolas de calidad y materiales industriales.',
     connectWithUsSocial: 'Conéctese con nosotros en las redes sociales para actualizaciones y noticias.',
     allRightsReserved: 'Todos los derechos reservados',
     privacyPolicy: 'Política de privacidad',
     termsOfService: 'Términos de servicio',
-    
+
     // Product Detail Page - Titles and Subtitles
     premiumBasmatiRice: 'Arroz Basmati Premium',
     extraLongGrainAromatic: 'Grano Extra Largo | Aromático | Calidad de Exportación',
     basmatiRiceDetailDesc: 'Nuestro arroz Basmati premium proviene de las mejores granjas de India, conocidas por su aroma excepcional, granos extra largos y calidad superior. Perfecto para mercados internacionales que exigen lo mejor.',
-    
+
     premiumCattleFeed: 'Alimento para Ganado Premium',
     nutritiousBalancedQuality: 'Nutritivo | Equilibrado | Alta Calidad',
     cattleFeedDetailDesc: 'Nuestra gama completa de productos de alimento para ganado garantiza una nutrición óptima para el ganado. Desde tortas de aceite hasta comidas ricas en proteínas, proporcionamos todo lo necesario para un crecimiento saludable del ganado, una producción de leche mejorada y una productividad general del ganado.',
-    
+
     premiumWheat: 'Trigo Premium',
     highQualityExportGrade: 'Alta Calidad | Grado de Exportación | Variedades Múltiples',
     wheatDetailDesc: 'Trigo de calidad de exportación de las mejores granjas. Nuestro trigo cumple con los estándares internacionales y es perfecto para molinos de harina, panaderías e industrias de procesamiento de alimentos.',
-    
+
     indianSpices: 'Especias Indias',
     aromaticPurePremium: 'Aromático | Puro | Calidad Premium',
     spicesDetailDesc: 'Especias indias auténticas con aroma y sabor ricos. Nuestras especias se seleccionan, procesan y empaquetan cuidadosamente para conservar su esencia natural y calidad.',
-    
+
     nonBasmatiRiceTitle: 'Arroz No Basmati',
     highQualityNutritiousVersatile: 'Alta Calidad | Nutritivo | Versátil',
     nonBasmatiRiceDetailDesc: 'Variedades de arroz no Basmati de alta calidad adecuadas para el consumo diario y diversas aplicaciones culinarias. Nuestro arroz se procesa cuidadosamente para mantener sus nutrientes naturales y calidad.',
-    
+
     yellowMaizeTitle: 'Maíz Amarillo',
     premiumQualityHighYield: 'Calidad Premium | Alto Rendimiento | Multiuso',
     maizeDetailDesc: 'Maíz amarillo de calidad premium, ideal para alimento animal, procesamiento de alimentos y aplicaciones industriales. Nuestro maíz proviene de las mejores granjas y se procesa para cumplir con los estándares internacionales.',
-    
+
     premiumChickpeasTitle: 'Garbanzos Premium',
     nutritiousHighProteinExport: 'Nutritivo | Alta Proteína | Calidad de Exportación',
     chickpeasDetailDesc: 'Garbanzos de calidad premium ricos en proteínas y nutrientes esenciales. Perfecto para diversas aplicaciones culinarias y mercados de exportación.',
-    
+
     corianderSeedsTitle: 'Semillas de Cilantro',
     aromaticPurePremiumQuality: 'Aromático | Puro | Calidad Premium',
     corianderDetailDesc: 'Semillas de cilantro frescas y aromáticas con sabor rico. Nuestro cilantro se selecciona y procesa cuidadosamente para conservar su aroma natural y calidad.',
-    
+
     premiumSoyabeanTitle: 'Soja Premium',
     highProteinNutritiousExport: 'Alta Proteína | Nutritivo | Calidad de Exportación',
     soyabeanDetailDesc: 'Soja de calidad premium rica en proteínas y nutrientes esenciales. Perfecto para extracción de aceite, procesamiento de alimentos y aplicaciones de alimento animal.',
-    
+
     freshOnionsTitle: 'Cebollas Frescas',
     premiumQualityFreshExport: 'Calidad Premium | Fresco | Grado de Exportación',
     onionsDetailDesc: 'Cebollas frescas y de alta calidad de las mejores granjas. Disponibles en varios tamaños y variedades para mercados nacionales e internacionales.',
-    
+
     // Cattle Feed Varieties
     cottonseedOilCake: 'Torta de Semilla de Algodón',
     cottonseedDesc: 'Un ingrediente alimenticio rico en proteínas que apoya la producción de leche y la salud general del ganado. Rico en fibra y nutrientes esenciales.',
@@ -1537,7 +1553,7 @@ aboutHeadingLine2: 'marchés mondiaux',
     soyabeanMealDesc: 'Fuente de proteína premium ampliamente utilizada para mejorar la producción de leche y el crecimiento general del ganado.',
     baledWheatStraw: 'Paja de Trigo en Pacas',
     baledStrawDesc: 'Nuestras pacas de paja de trigo son limpias, bien secas e ideales para alimento y cama de ganado.',
-    
+
     // Basmati Varieties
     basmati1121: 'Basmati 1121',
     basmati1121Desc: 'Grano extra largo con excelente elongación después de cocinar',
@@ -1547,7 +1563,7 @@ aboutHeadingLine2: 'marchés mondiaux',
     basmati1401Desc: 'Buena longitud con calidad confiable para exportación',
     basmati1509: 'Basmati 1509',
     basmati1509Desc: 'Cosecha temprana, rentable con buena longitud de grano',
-    
+
     // Wheat Varieties
     durumWheat: 'Trigo Duro',
     durumWheatDesc: 'Alto contenido de proteínas, ideal para pasta',
@@ -1555,7 +1571,7 @@ aboutHeadingLine2: 'marchés mondiaux',
     hardRedWheatDesc: 'Perfecto para hacer pan',
     softWheat: 'Trigo Blando',
     softWheatDesc: 'Ideal para pasteles y repostería',
-    
+
     // Spice Varieties
     turmericPowder: 'Polvo de Cúrcuma',
     turmericDesc: 'Puro y color amarillo vibrante',
@@ -1565,7 +1581,7 @@ aboutHeadingLine2: 'marchés mondiaux',
     corianderSeedsDesc: 'Frescas y aromáticas',
     cuminSeeds: 'Semillas de Comino',
     cuminDesc: 'Sabor y aroma ricos',
-    
+
     // Product Features
     highProteinContent: 'Alto Contenido de Proteínas',
     richInFiber: 'Rico en Fibra',
@@ -1596,7 +1612,7 @@ aboutHeadingLine2: 'marchés mondiaux',
     cleanWellDried: 'Limpio y Bien Seco',
     idealForBedding: 'Ideal para Cama',
     livestockFeed: 'Alimento para Ganado',
-    
+
     // Grain Specifications
     length: 'Longitud',
     purity: 'Pureza',
@@ -1626,7 +1642,7 @@ aboutHeadingLine2: 'marchés mondiaux',
     uniform: 'Uniforme',
     fresh: 'Fresco',
     clean: 'Limpio',
-    
+
     // Product Not Found
     productNotFound: 'Producto no encontrado',
     goBackHome: 'Volver al Inicio',

@@ -23,9 +23,7 @@ export default function About() {
   const features = [
     { icon: Award, title: t.assuredQuality, description: t.assuredQualityDesc },
     { icon: FileText, title: t.exportDoc, description: t.exportDocDesc },
-    { icon: Globe2, title: t.countries, description: t.countriesDesc },
     { icon: Truck, title: t.logistics, description: t.logisticsDesc },
-    { icon: Leaf, title: t.certifiedOrganic, description: t.certifiedOrganicDesc },
     { icon: Sprout, title: t.directFarm, description: t.directFarmDesc },
   ];
 
@@ -126,7 +124,7 @@ export default function About() {
 
             {/* Left - Hidden on mobile, shown on desktop */}
             <div className="hidden lg:block space-y-8">
-              {features.slice(0, 3).map((feature, index) => (
+              {features.slice(0, 2).map((feature, index) => (
                 <div key={index} className="text-right">
                   <h4 className="font-semibold text-lg">{feature.title}</h4>
                   <p className="text-gray-600 text-sm">{feature.description}</p>
@@ -177,7 +175,7 @@ export default function About() {
 
             {/* Right - Hidden on mobile, shown on desktop */}
             <div className="hidden lg:block space-y-8">
-              {features.slice(3).map((feature, index) => (
+              {features.slice(2).map((feature, index) => (
                 <div key={index}>
                   <h4 className="font-semibold text-lg">{feature.title}</h4>
                   <p className="text-gray-600 text-sm">{feature.description}</p>

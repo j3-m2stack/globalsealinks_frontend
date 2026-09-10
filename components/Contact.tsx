@@ -67,24 +67,6 @@ export default function Contact() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const certifications = [
-    t.apedaCertified,
-    t.fssaiApproved,
-    t.iso22000,
-    t.haccp,
-    t.gmp,
-    t.fdaCompliant,
-    t.usdaStandard,
-    t.iecRegistered,
-    t.exportQualityAssured,
-    t.organicCertified,
-    t.halalCertified,
-    t.globalTradeVerified,
-  ];
-
-  // Duplicate the array for seamless infinite scroll
-  const duplicatedCertifications = [...certifications, ...certifications];
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -124,7 +106,7 @@ export default function Contact() {
           productOfInterest: '',
           message: ''
         });
-setErrors({});
+        setErrors({});
         // Auto-hide success message after 5 seconds
         setTimeout(() => {
           setSubmitStatus({ type: null, message: '' });
@@ -186,60 +168,6 @@ setErrors({});
       <div className="absolute bottom-0 right-0 w-64 h-64 sm:w-96 sm:h-96 bg-emerald-200/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Certifications Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="mb-16 sm:mb-20"
-        >
-          {/* Title */}
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-100/70 to-teal-100/70 text-emerald-700 font-semibold px-5 py-2.5 rounded-full shadow-sm mb-4">
-              <CheckCircle2 className="w-4 h-4" />
-              <span className="text-sm sm:text-base">{t.globalStandards}</span>
-            </div>
-
-            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-              {t.globalCertifications}
-            </h3>
-          </div>
-
-          {/* Slider */}
-          <div className="relative overflow-hidden">
-            {/* Gradient fade */}
-            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-emerald-100/50 to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-emerald-100/50 to-transparent z-10 pointer-events-none" />
-
-            <div className="overflow-hidden py-4">
-              <motion.div
-                className="flex gap-4"
-                animate={{
-                  x: ['0%', '-50%'],
-                }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 28,
-                  ease: 'linear',
-                }}
-              >
-                {duplicatedCertifications.map((cert, index) => (
-                  <div
-                    key={index}
-                    className="flex-shrink-0 bg-white/40 backdrop-blur-xl border border-white/30 rounded-full px-5 py-3 shadow-md hover:scale-105 transition-all duration-300"
-                  >
-                    <div className="flex items-center space-x-2">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                      <span className="text-sm font-semibold text-gray-800 whitespace-nowrap">
-                        {cert}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </motion.div>
-            </div>
-          </div>
-        </motion.div>
 
         {/* Section Header */}
         <motion.div
@@ -380,11 +308,11 @@ setErrors({});
                       onChange={handleChange}
                       required
                       disabled={isSubmitting}
-className={`w-full px-4 py-2.5 rounded-xl border-2 transition-all outline-none text-gray-900 disabled:bg-gray-100 disabled:cursor-not-allowed text-sm
+                      className={`w-full px-4 py-2.5 rounded-xl border-2 transition-all outline-none text-gray-900 disabled:bg-gray-100 disabled:cursor-not-allowed text-sm
 ${errors.email
-  ? 'border-red-500 focus:ring-red-200'
-  : 'border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200'
-}`}                      placeholder={t.enterEmail}
+                          ? 'border-red-500 focus:ring-red-200'
+                          : 'border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200'
+                        }`} placeholder={t.enterEmail}
                     />
 
                     {errors.email && (
@@ -410,9 +338,9 @@ ${errors.email
                       placeholder={t.enterPhone}
                     />
 
-               {errors.phone && (
-  <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
-)}
+                    {errors.phone && (
+                      <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+                    )}
                   </div>
                 </div>
 
@@ -556,16 +484,16 @@ ${errors.email
                     {t.phone}
                   </h4>
                   <a
-                    href="tel:+917879068147"
+                    href="tel:+918959893299 "
                     className="text-gray-700 hover:text-blue-700 font-medium block text-sm mb-1"
                   >
-                    +91 7879068147
+                    +91 8959893299
                   </a>
                   <a
-                    href="tel:+918959893299"
+                    href="tel:+917879068147"
                     className="text-gray-700 hover:text-blue-700 font-medium block text-sm"
                   >
-                    +91 8959893299 (WhatsApp)
+                    +91 7879068147 (WhatsApp)
                   </a>
                 </div>
               </div>

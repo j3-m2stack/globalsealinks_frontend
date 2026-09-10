@@ -21,10 +21,10 @@ export default function Home() {
       <Products />
       <ExportProcess />
       <Imports />
-      <PartnerWithUs />
+      {/* <PartnerWithUs /> */}
       <GlobalReach />
-      <Testimonials />
-      {/* <Certifications /> */}
+      {/* <Testimonials /> */}
+      <Certifications />
       <Contact />
       <Footer />
       <WhatsAppButton />

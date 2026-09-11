@@ -4,6 +4,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
+import { PackageOpen } from 'lucide-react';
 
 export default function Imports() {
   const ref = useRef(null);
@@ -60,11 +61,16 @@ export default function Imports() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           className="text-center mb-14"
         >
-          <div className="inline-flex items-center bg-white/70 border border-amber-200 rounded-full px-4 py-2 mb-5">
-            <span className="text-gray-800 text-sm font-semibold">
-              {t.whatWeImport}
-            </span>
-          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ delay: 0.2 }}
+            className="inline-flex items-center space-x-2 bg-white/70 border border-amber-200 font-semibold px-4 sm:px-5 py-2 sm:py-2.5 rounded-full shadow-sm mb-4 sm:mb-6"
+          >
+            <PackageOpen className="w-4 h-4 text-amber-700" />
+            <span className="text-sm sm:text-base">{t.whatWeImport}</span>
+          </motion.div>
 
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             {t.importsTitle}

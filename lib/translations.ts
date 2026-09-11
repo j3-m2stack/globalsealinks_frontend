@@ -68,6 +68,7 @@ Whether you require a regular supply or a customized sourcing solution, our obje
     maizeDesc: 'Premium quality yellow maize, ideal for animal feed, food processing, and industrial applications.',
 
     // Export Process
+    ourProcess: "Our Process",
     processTitle: 'Our Export Process',
     processSubtitle: 'Seamless journey from inquiry to delivery',
     inquiry: 'Inquiry',
@@ -511,6 +512,7 @@ Whether you require a regular supply or a customized sourcing solution, our obje
     maizeDesc: 'ذرة صفراء عالية الجودة، مثالية لأعلاف الحيوانات ومعالجة الأغذية والتطبيقات الصناعية.',
 
     // Export Process
+    ourProcess: "عمليتنا",
     processTitle: 'عملية التصدير لدينا',
     processSubtitle: 'رحلة سلسة من الاستفسار إلى التسليم',
     inquiry: 'استفسار',
@@ -954,6 +956,7 @@ Que vous ayez besoin d’un approvisionnement régulier ou d’une solution d’
     maizeDesc: 'Maïs jaune de qualité supérieure, idéal pour l\'alimentation animale, la transformation alimentaire et les applications industrielles.',
 
     // Export Process
+    ourProcess: "Notre processus",
     processTitle: 'Notre processus d\'exportation',
     processSubtitle: 'Parcours fluide de la demande à la livraison',
     inquiry: 'Demande',
@@ -1398,6 +1401,7 @@ Ya sea que necesite un suministro regular o una solución de abastecimiento pers
     maizeDesc: 'Maíz amarillo de calidad premium, ideal para alimento animal, procesamiento de alimentos y aplicaciones industriales.',
 
     // Export Process
+    ourProcess: "Nuestro proceso",
     processTitle: 'Nuestro proceso de exportación',
     processSubtitle: 'Viaje fluido desde la consulta hasta la entrega',
     inquiry: 'Consulta',

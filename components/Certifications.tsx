@@ -94,7 +94,7 @@ export default function Certifications() {
     <section
       id="certifications"
       ref={sectionRef}
-      className="relative pt-16 sm:pt-20 pb-0 overflow-hidden bg-gradient-to-b from-[#f5faf7] via-[#eff8f3] to-[#e8f4ed]"
+      className="relative pt-12 sm:pt-14 pb-0 overflow-hidden bg-gradient-to-b from-[#f5faf7] via-[#eff8f3] to-[#e8f4ed]"
     >
       {/* Subtle World Map Dot Pattern in Background */}
       <div className="pointer-events-none select-none absolute inset-0 overflow-hidden opacity-85">
@@ -166,10 +166,14 @@ export default function Certifications() {
           className="text-center max-w-4xl mx-auto mb-10 sm:mb-12"
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#e8f6ee] border border-[#cae8d5] text-[#136a3e] text-xs sm:text-sm font-semibold tracking-wide shadow-sm mb-4 sm:mb-5">
-            <ShieldCheck className="w-4 h-4 text-[#15803d]" strokeWidth={2.2} />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ delay: 0.2 }}
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-100 to-emerald-100 text-green-700 font-semibold px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border-2 border-green-200/50 shadow-sm mb-4 sm:mb-6"
+          >            <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5" />
             <span>{t.ourCertificationsBadge}</span>
-          </div>
+          </motion.div>
 
           {/* Main Serif Heading */}
           <h2

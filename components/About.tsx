@@ -48,20 +48,20 @@ export default function About() {
           >
             <div className="relative w-full aspect-[4/5] rounded-[32px] overflow-hidden shadow-2xl">
               <Image
-                src="/images/aboutus.jpeg"
+                src="/images/aboutus.PNG"
                 alt="Fresh Produce"
                 fill
-                className="object-cover"
+                className="object-cover "
               />
             </div>
 
-            <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 w-24 h-24 sm:w-28 sm:h-28 bg-green-700 rounded-full flex flex-col items-center justify-center text-white text-center shadow-xl">
+            {/* <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 w-24 h-24 sm:w-28 sm:h-28 bg-green-700 rounded-full flex flex-col items-center justify-center text-white text-center shadow-xl">
               <Leaf className="w-6 h-6 sm:w-7 sm:h-7 mb-1" />
               <span className="text-xs sm:text-sm font-bold">100%</span>
               <span className="text-[10px] sm:text-xs">Certified</span>
-            </div>
+            </div> */}
 
-            <div className="absolute -bottom-4 right-4 sm:-bottom-6 sm:right-6 bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 shadow-xl max-w-[200px] sm:max-w-xs">
+            {/* <div className="absolute -bottom-4 right-4 sm:-bottom-6 sm:right-6 bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 shadow-xl max-w-[200px] sm:max-w-xs">
               <div className="flex gap-2 sm:gap-3">
                 <CheckCircle className="w-6 h-6 sm:w-7 sm:h-7 text-green-600 flex-shrink-0" />
                 <div>
@@ -73,7 +73,7 @@ export default function About() {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Right Content */}
@@ -82,10 +82,16 @@ export default function About() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             className="space-y-6 order-1 lg:order-2"
           >
-            <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-full text-2xl">
-              <Leaf className="w-4 h-4" />
-              {t.whyChooseUs}
-            </div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ delay: 0.2 }}
+              className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-85 to-emerald-90 text-green-700 font-semibold px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border-2 border-green-200/50 shadow-sm mb-4 sm:mb-6"
+            >
+              <Leaf className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="text-sm sm:text-base">{t.whyChooseUs}</span>
+            </motion.div>
 
             <h2 className={`${dmSerif.className} text-3xl sm:text-4xl lg:text-5xl text-gray-900`}>
               {t.deliveringPremium}{' '}
@@ -107,15 +113,21 @@ export default function About() {
           className="mt-24"
         >
           <div className="text-center mb-14">
-            <span className="inline-flex bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm">
-              {t.strengthsBadge}
-            </span>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ delay: 0.2 }}
+              className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-85 to-emerald-90 text-green-700 font-semibold px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border-2 border-green-200/50 shadow-sm mb-4 sm:mb-6"
+            >
+              <Leaf className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="text-sm sm:text-base">{t.strengthsBadge}</span>
+            </motion.div>
 
-            <h3 className={`${dmSerif.className} text-4xl mt-5`}>
+            <h3 className={`${dmSerif.className} text-3xl sm:text-4xl lg:text-5xl  mt-4`}>
               {t.trustTitle}
             </h3>
 
-            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 leading-7 sm:leading-8 mt-4 max-w-2xl mx-auto">
               {t.trustSubtitle}
             </p>
           </div>

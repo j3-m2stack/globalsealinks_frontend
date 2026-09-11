@@ -10,6 +10,8 @@ import {
   Package,
   Truck,
   CheckCircle,
+  Workflow,
+  Route,
 } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -82,11 +84,17 @@ export default function ExportProcess() {
           transition={{ duration: 0.5 }}
           className="text-center mb-10"
         >
-          <div className="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-5">
-            <span className="text-white text-sm font-semibold">
-              Our Process
-            </span>
-          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ delay: 0.2 }}
+            className="inline-flex items-center space-x-2 bg-white/90 border-0 border-green-200/50 font-semibold px-4 sm:px-5 py-2 sm:py-2.5 rounded-full shadow-sm mb-4 sm:mb-6"
+          >
+            <Route className="w-4 h-4 text-green-600 sm:w-5 sm:h-5" />
+            <span className="text-sm sm:text-base">{t.ourProcess}</span>
+          </motion.div>
+
 
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
             {t.processTitle}
@@ -121,9 +129,8 @@ export default function ExportProcess() {
                   className="relative"
                 >
                   <div
-                    className={`flex items-center ${
-                      isLeft ? 'justify-end' : 'justify-start'
-                    }`}
+                    className={`flex items-center ${isLeft ? 'justify-end' : 'justify-start'
+                      }`}
                   >
                     {/* Card */}
                     <div className={`w-[46%] ${isLeft ? 'pr-8' : 'pl-8'}`}>
@@ -132,11 +139,10 @@ export default function ExportProcess() {
                         className="bg-white/10 backdrop-blur-md rounded-xl p-4 shadow-lg border border-white/20"
                       >
                         <div
-                          className={`flex items-start gap-3 ${
-                            isLeft
-                              ? 'flex-row'
-                              : 'flex-row-reverse text-right'
-                          }`}
+                          className={`flex items-start gap-3 ${isLeft
+                            ? 'flex-row'
+                            : 'flex-row-reverse text-right'
+                            }`}
                         >
                           <div
                             className={`w-10 h-10 ${step.iconBg} rounded-lg flex items-center justify-center`}

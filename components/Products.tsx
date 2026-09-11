@@ -4,7 +4,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef, useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, BadgeCheck } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 // Static product data - images are language-independent
@@ -92,9 +92,16 @@ export default function Products() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           className="text-center mb-16"
         >
-          <div className="inline-flex  items-center bg-green-100 text-green-700 px-5 py-2 rounded-full font-semibold mb-6">
-            {t.premiumQuality}
-          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ delay: 0.2 }}
+            className="inline-flex items-center space-x-2 bg-green-100 text-green-700 border-0 border-green-200/50 font-semibold px-4 sm:px-5 py-2 sm:py-2.5 rounded-full shadow-sm mb-4 sm:mb-6"
+          >
+            <BadgeCheck className="w-4 h-4 text-green-600 sm:w-5 sm:h-5" />
+            <span className="text-sm sm:text-base">{t.premiumQuality}</span>
+          </motion.div>
 
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             {t.productsTitle}

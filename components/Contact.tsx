@@ -487,13 +487,13 @@ ${errors.email
                     href="tel:+918959893299 "
                     className="text-gray-700 hover:text-blue-700 font-medium block text-sm mb-1"
                   >
-                    +91 8959893299
+                    +91 8959893299 (WhatsApp)
                   </a>
                   <a
                     href="tel:+917879068147"
                     className="text-gray-700 hover:text-blue-700 font-medium block text-sm"
                   >
-                    +91 7879068147 (WhatsApp)
+                    +91 7879068147
                   </a>
                 </div>
               </div>

@@ -48,7 +48,7 @@ export default function About() {
           >
             <div className="relative w-full aspect-[4/5] rounded-[32px] overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200"
+                src="/images/aboutus.jpeg"
                 alt="Fresh Produce"
                 fill
                 className="object-cover"

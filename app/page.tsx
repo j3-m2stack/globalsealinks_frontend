@@ -22,7 +22,7 @@ export default function Home() {
       <ExportProcess />
       <Imports />
       {/* <PartnerWithUs /> */}
-      <GlobalReach />
+      {/* <GlobalReach /> */}
       {/* <Testimonials /> */}
       <Certifications />
       <Contact />

@@ -1,4 +1,4 @@
-﻿export type Language = 'en' | 'ar' | 'fr' | 'es';
+export type Language = 'en' | 'ar' | 'fr' | 'es';
 
 export const translations = {
   en: {
@@ -179,6 +179,37 @@ Whether you require a regular supply or a customized sourcing solution, our obje
     organicCertified: 'Organic Certified',
     halalCertified: 'Halal Certified',
     globalTradeVerified: 'Global Trade Verified',
+    ourCertificationsBadge: 'Our Certifications',
+    certificationsHighlight: 'Certifications',
+    complianceTitle: '& Compliance',
+    certificationsDescription:
+      'At Global Sea Links, we ensure that our operations and supply chain meet the highest standards of quality, safety and regulatory compliance. We are proud to be associated with reputed certifications and registrations that support our commitment to global trade.',
+    certDgftTitle: 'IEC / DGFT Compliant',
+    certDgftDesc:
+      'Compliant with Directorate General of Foreign Trade (DGFT) regulations and export policy requirements.',
+    certDgftAlt: 'Directorate General of Foreign Trade (DGFT) Logo',
+    certGstTitle: 'GST Registered',
+    certGstDesc:
+      'Registered under Goods and Services Tax (GST) for transparent and compliant business operations.',
+    certGstAlt: 'GST Registered Logo',
+    certFieoTitle: 'FIEO Member',
+    certFieoDesc:
+      'Member of the Federation of Indian Export Organisations (FIEO) for export facilitation and support.',
+    certFieoAlt: 'Federation of Indian Export Organisations (FIEO) Logo',
+    certApedaTitle: 'APEDA Registered',
+    certApedaDesc:
+      'Registered with the Agricultural and Processed Food Products Export Development Authority (APEDA) for agricultural product exports.',
+    certApedaAlt: 'APEDA Logo',
+    certFssaiTitle: 'FSSAI Licensed',
+    certFssaiDesc:
+      'Food Safety and Standards Authority of India (FSSAI) license for safe and quality food products.',
+    certFssaiAlt: 'FSSAI Logo',
+    gstLogoPlaceholder: 'GST Logo',
+    placeholderText: '(Placeholder)',
+    certTrustTagline: 'Compliant. Transparent. Trade Ready.',
+    certTrustDesc:
+      'Our certifications and registrations help us maintain quality, build trust and deliver value to our global buyers.',
+    certPortBannerAlt: 'Container Port and Shipping Logistics',
 
     // Product Details Page
     backToHome: 'Back to Home',
@@ -591,6 +622,37 @@ Whether you require a regular supply or a customized sourcing solution, our obje
     organicCertified: 'عضوي معتمد',
     halalCertified: 'حلال معتمد',
     globalTradeVerified: 'التجارة العالمية معتمدة',
+    ourCertificationsBadge: 'شهاداتنا',
+    certificationsHighlight: 'الشهادات',
+    complianceTitle: 'والامتثال',
+    certificationsDescription:
+      'في جلوبال سي لينكس، نحرص على أن تلبي عملياتنا وسلسلة التوريد لدينا أعلى معايير الجودة والسلامة والامتثال التنظيمي. نحن فخورون بارتباطنا بشهادات وتسجيلات مرموقة تدعم التزامنا بالتجارة العالمية.',
+    certDgftTitle: 'متوافق مع IEC / DGFT',
+    certDgftDesc:
+      'متوافق مع لوائح المديرية العامة للتجارة الخارجية (DGFT) ومتطلبات سياسة التصدير.',
+    certDgftAlt: 'شعار المديرية العامة للتجارة الخارجية (DGFT)',
+    certGstTitle: 'مسجل في GST',
+    certGstDesc:
+      'مسجل بموجب ضريبة السلع والخدمات (GST) لعمليات تجارية شفافة ومتوافقة.',
+    certGstAlt: 'شعار التسجيل في GST',
+    certFieoTitle: 'عضو في FIEO',
+    certFieoDesc:
+      'عضو في اتحاد منظمات التصدير الهندية (FIEO) لتسهيل ودعم الصادرات.',
+    certFieoAlt: 'شعار اتحاد منظمات التصدير الهندية (FIEO)',
+    certApedaTitle: 'مسجل لدى APEDA',
+    certApedaDesc:
+      'مسجل لدى هيئة تنمية صادرات المنتجات الغذائية الزراعية والمصنعة (APEDA) لتصدير المنتجات الزراعية.',
+    certApedaAlt: 'شعار APEDA',
+    certFssaiTitle: 'مرخص من FSSAI',
+    certFssaiDesc:
+      'ترخيص هيئة معايير وسلامة الأغذية في الهند (FSSAI) لمنتجات غذائية آمنة وعالية الجودة.',
+    certFssaiAlt: 'شعار FSSAI',
+    gstLogoPlaceholder: 'شعار GST',
+    placeholderText: '(عنصر نائب)',
+    certTrustTagline: 'متوافق. شفاف. جاهز للتجارة.',
+    certTrustDesc:
+      'تساعدنا شهاداتنا وتسجيلاتنا في الحفاظ على الجودة وبناء الثقة وتقديم القيمة لمشترينا حول العالم.',
+    certPortBannerAlt: 'ميناء الحاويات والخدمات اللوجستية للشحن',
 
     // Product Details Page
     backToHome: 'العودة إلى الصفحة الرئيسية',
@@ -1003,6 +1065,37 @@ Que vous ayez besoin d’un approvisionnement régulier ou d’une solution d’
     organicCertified: 'Biologique certifié',
     halalCertified: 'Halal certifié',
     globalTradeVerified: 'Commerce mondial vérifié',
+    ourCertificationsBadge: 'Nos Certifications',
+    certificationsHighlight: 'Certifications',
+    complianceTitle: 'et Conformité',
+    certificationsDescription:
+      'Chez Global Sea Links, nous veillons à ce que nos opérations et notre chaîne d\'approvisionnement répondent aux normes les plus strictes de qualité, de sécurité et de conformité réglementaire. Nous sommes fiers d\'être associés à des certifications et des enregistrements réputés qui soutiennent notre engagement envers le commerce mondial.',
+    certDgftTitle: 'Conforme IEC / DGFT',
+    certDgftDesc:
+      'Conforme aux réglementations de la Direction générale du commerce extérieur (DGFT) et aux exigences de la politique d\'exportation.',
+    certDgftAlt: 'Logo de la Direction générale du commerce extérieur (DGFT)',
+    certGstTitle: 'Enregistré à la GST',
+    certGstDesc:
+      'Enregistré sous la taxe sur les produits et services (GST) pour des opérations commerciales transparentes et conformes.',
+    certGstAlt: 'Logo d\'enregistrement GST',
+    certFieoTitle: 'Membre de la FIEO',
+    certFieoDesc:
+      'Membre de la Fédération des organisations d\'exportation indiennes (FIEO) pour la facilitation et le soutien aux exportations.',
+    certFieoAlt: 'Logo de la Fédération des organisations d\'exportation indiennes (FIEO)',
+    certApedaTitle: 'Enregistré auprès de l\'APEDA',
+    certApedaDesc:
+      'Enregistré auprès de l\'Autorité de développement des exportations de produits agricoles et alimentaires transformés (APEDA) pour l\'exportation de produits agricoles.',
+    certApedaAlt: 'Logo APEDA',
+    certFssaiTitle: 'Sous licence FSSAI',
+    certFssaiDesc:
+      'Licence de l\'Autorité indienne de sécurité et de normalisation des aliments (FSSAI) pour des produits alimentaires sûrs et de qualité.',
+    certFssaiAlt: 'Logo FSSAI',
+    gstLogoPlaceholder: 'Logo GST',
+    placeholderText: '(Espace réservé)',
+    certTrustTagline: 'Conforme. Transparent. Prêt pour le commerce.',
+    certTrustDesc:
+      'Nos certifications et enregistrements nous aident à maintenir la qualité, à instaurer la confiance et à apporter de la valeur à nos acheteurs mondiaux.',
+    certPortBannerAlt: 'Port de conteneurs et logistique d\'expédition',
 
     // Product Details Page
     backToHome: 'Retour à l\'accueil',
@@ -1416,6 +1509,37 @@ Ya sea que necesite un suministro regular o una solución de abastecimiento pers
     organicCertified: 'Orgánico certificado',
     halalCertified: 'Halal certificado',
     globalTradeVerified: 'Comercio global verificado',
+    ourCertificationsBadge: 'Nuestras Certificaciones',
+    certificationsHighlight: 'Certificaciones',
+    complianceTitle: 'y Cumplimiento',
+    certificationsDescription:
+      'En Global Sea Links, nos aseguramos de que nuestras operaciones y cadena de suministro cumplan con los más altos estándares de calidad, seguridad y cumplimiento normativo. Estamos orgullosos de estar asociados con certificaciones y registros de prestigio que respaldan nuestro compromiso con el comercio global.',
+    certDgftTitle: 'Cumplimiento IEC / DGFT',
+    certDgftDesc:
+      'Cumple con las regulaciones de la Dirección General de Comercio Exterior (DGFT) y los requisitos de la política de exportación.',
+    certDgftAlt: 'Logotipo de la Dirección General de Comercio Exterior (DGFT)',
+    certGstTitle: 'Registrado en GST',
+    certGstDesc:
+      'Registrado bajo el Impuesto sobre Bienes y Servicios (GST) para operaciones comerciales transparentes y conformes.',
+    certGstAlt: 'Logotipo de registro GST',
+    certFieoTitle: 'Miembro de FIEO',
+    certFieoDesc:
+      'Miembro de la Federación de Organizaciones de Exportación de la India (FIEO) para la facilitación y apoyo a las exportaciones.',
+    certFieoAlt: 'Logotipo de la Federación de Organizaciones de Exportación de la India (FIEO)',
+    certApedaTitle: 'Registrado en APEDA',
+    certApedaDesc:
+      'Registrado ante la Autoridad de Desarrollo de Exportaciones de Productos Agrícolas y Alimentos Procesados (APEDA) para la exportación de productos agrícolas.',
+    certApedaAlt: 'Logotipo de APEDA',
+    certFssaiTitle: 'Con licencia FSSAI',
+    certFssaiDesc:
+      'Licencia de la Autoridad de Normas y Seguridad Alimentaria de la India (FSSAI) para productos alimenticios seguros y de calidad.',
+    certFssaiAlt: 'Logotipo de FSSAI',
+    gstLogoPlaceholder: 'Logotipo GST',
+    placeholderText: '(Marcador de posición)',
+    certTrustTagline: 'Conforme. Transparente. Listo para el comercio.',
+    certTrustDesc:
+      'Nuestras certificaciones y registros nos ayudan a mantener la calidad, generar confianza y ofrecer valor a nuestros compradores globales.',
+    certPortBannerAlt: 'Puerto de contenedores y logística de transporte marítimo',
 
     // Product Details Page
     backToHome: 'Volver al inicio',

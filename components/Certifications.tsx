@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { ShieldCheck } from 'lucide-react';
 import { dmSerif } from '@/lib/fonts';
+import { useLanguage } from '@/context/LanguageContext';
 
 interface CertificationItem {
   id: string;
@@ -14,56 +15,20 @@ interface CertificationItem {
   imageAlt: string;
 }
 
-const certificationsData: CertificationItem[] = [
-  {
-    id: 'dgft',
-    title: 'IEC / DGFT Compliant',
-    description:
-      'Compliant with Directorate General of Foreign Trade (DGFT) regulations and export policy requirements.',
-    imageSrc: '/images/certifications/dgft.png',
-    imageAlt: 'Directorate General of Foreign Trade (DGFT) Logo',
-  },
-  {
-    id: 'gst',
-    title: 'GST Registered',
-    description:
-      'Registered under Goods and Services Tax (GST) for transparent and compliant business operations.',
-    // Set to null as placeholder per request so user can add exact logo later
-    imageSrc: '/images/certifications/gst.png',
-    imageAlt: 'GST Registered Logo',
-  },
-  {
-    id: 'fieo',
-    title: 'FIEO Member',
-    description:
-      'Member of the Federation of Indian Export Organisations (FIEO) for export facilitation and support.',
-    imageSrc: '/images/certifications/fieo.png',
-    imageAlt: 'Federation of Indian Export Organisations (FIEO) Logo',
-  },
-  {
-    id: 'apeda',
-    title: 'APEDA Registered',
-    description:
-      'Registered with the Agricultural and Processed Food Products Export Development Authority (APEDA) for agricultural product exports.',
-    imageSrc: '/images/certifications/apeda.png',
-    imageAlt: 'APEDA Logo',
-  },
-  {
-    id: 'fssai',
-    title: 'FSSAI Licensed',
-    description:
-      'Food Safety and Standards Authority of India (FSSAI) license for safe and quality food products.',
-    imageSrc: '/images/certifications/fssai.png',
-    imageAlt: 'FSSAI Logo',
-  },
-];
-
-function CardLogo({ cert }: { cert: CertificationItem }) {
+function CardLogo({
+  cert,
+  placeholderGst,
+  placeholderText,
+}: {
+  cert: CertificationItem;
+  placeholderGst: string;
+  placeholderText: string;
+}) {
   if (!cert.imageSrc) {
     return (
       <div className="h-14 sm:h-16 w-36 rounded-xl border border-dashed border-gray-300 bg-gray-50/70 flex flex-col items-center justify-center text-xs text-gray-400 font-medium px-2 text-center select-none">
-        <span className="font-semibold text-gray-500">GST Logo</span>
-        <span className="text-[10px] text-gray-400 mt-0.5">(Placeholder)</span>
+        <span className="font-semibold text-gray-500">{placeholderGst}</span>
+        <span className="text-[10px] text-gray-400 mt-0.5">{placeholderText}</span>
       </div>
     );
   }
@@ -72,19 +37,58 @@ function CardLogo({ cert }: { cert: CertificationItem }) {
     <img
       src={cert.imageSrc}
       alt={cert.imageAlt}
-      className={`h-14 sm:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 ${cert.id === 'dgft'
-          ? 'max-w-[92%] rounded shadow-sm'
-          : cert.id === 'fieo'
-            ? 'max-w-[65%]'
-            : 'max-w-[80%]'
+      className={`h-20 sm:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105 ${cert.id === 'dgft'
+        ? 'max-w-[95%] rounded shadow-sm'
+        : cert.id === 'fieo'
+          ? 'max-w-[75%]'
+          : 'max-w-[90%]'
         }`}
     />
   );
 }
 
 export default function Certifications() {
+  const { t } = useLanguage();
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: '-60px' });
+
+  const certificationsData: CertificationItem[] = [
+    {
+      id: 'dgft',
+      title: t.certDgftTitle,
+      description: t.certDgftDesc,
+      imageSrc: '/images/certifications/dgft.png',
+      imageAlt: t.certDgftAlt,
+    },
+    {
+      id: 'gst',
+      title: t.certGstTitle,
+      description: t.certGstDesc,
+      imageSrc: '/images/certifications/gst.png',
+      imageAlt: t.certGstAlt,
+    },
+    {
+      id: 'fieo',
+      title: t.certFieoTitle,
+      description: t.certFieoDesc,
+      imageSrc: '/images/certifications/fieo.png',
+      imageAlt: t.certFieoAlt,
+    },
+    {
+      id: 'apeda',
+      title: t.certApedaTitle,
+      description: t.certApedaDesc,
+      imageSrc: '/images/certifications/apeda.png',
+      imageAlt: t.certApedaAlt,
+    },
+    {
+      id: 'fssai',
+      title: t.certFssaiTitle,
+      description: t.certFssaiDesc,
+      imageSrc: '/images/certifications/fssai.png',
+      imageAlt: t.certFssaiAlt,
+    },
+  ];
 
   return (
     <section
@@ -164,22 +168,19 @@ export default function Certifications() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#e8f6ee] border border-[#cae8d5] text-[#136a3e] text-xs sm:text-sm font-semibold tracking-wide shadow-sm mb-4 sm:mb-5">
             <ShieldCheck className="w-4 h-4 text-[#15803d]" strokeWidth={2.2} />
-            <span>Our Certifications</span>
+            <span>{t.ourCertificationsBadge}</span>
           </div>
 
           {/* Main Serif Heading */}
           <h2
             className={`${dmSerif.className} text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-[#0a2333] leading-[1.15] mb-4`}
           >
-            Global <span className="text-[#136a3e]">Certifications</span> & Compliance
+            <span className="text-[#136a3e]">{t.certificationsHighlight}</span> {t.complianceTitle}
           </h2>
 
           {/* Subtitle / Paragraph */}
           <p className="text-[#4b5865] text-sm sm:text-base leading-relaxed max-w-3xl mx-auto px-2 font-normal">
-            At Global Sea Links, we ensure that our operations and supply chain meet the
-            highest standards of quality, safety and regulatory compliance. We are proud to
-            be associated with reputed certifications and registrations that support our
-            commitment to global trade.
+            {t.certificationsDescription}
           </p>
         </motion.div>
 
@@ -198,17 +199,26 @@ export default function Certifications() {
               className="group relative flex flex-col items-center text-center bg-white rounded-2xl p-5 sm:p-6 border border-[#e2ece5] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.07)] hover:-translate-y-1 transition-all duration-300"
             >
               {/* Logo Container with consistent height */}
-              <div className="w-full h-24 sm:h-28 flex items-center justify-center mb-4 px-1">
-                <CardLogo cert={cert} />
+              <div className="w-full h-32 sm:h-36 flex flex-col items-center justify-center px-1">
+                <div className="h-24 sm:h-28 flex items-center justify-center w-full">
+                  <CardLogo
+                    cert={cert}
+                    placeholderGst={t.gstLogoPlaceholder}
+                    placeholderText={t.placeholderText}
+                  />
+                </div>
+
+                {/* Green divider */}
+                <div className="w-16 h-[2px] bg-[#136a3e] rounded-full mt-3" />
               </div>
 
               {/* Card Title */}
-              <h3 className="text-[#0a2333] font-bold text-sm sm:text-base mb-2.5 tracking-tight group-hover:text-[#136a3e] transition-colors duration-200">
+              <h3 className="text-[#0a2333] font-bold text-sm sm:text-base leading-snug min-h-[2.5rem] flex items-center justify-center mb-3 tracking-tight group-hover:text-[#136a3e] transition-colors duration-200">
                 {cert.title}
               </h3>
 
               {/* Card Description */}
-              <p className="text-xs sm:text-[13px] text-[#556575] leading-relaxed font-normal mt-auto">
+              <p className="text-xs sm:text-[13px] text-[#556575] leading-relaxed font-normal mt-0 text-center min-h-[60px]">
                 {cert.description}
               </p>
             </motion.div>
@@ -233,7 +243,7 @@ export default function Certifications() {
 
             {/* Highlighted Tagline */}
             <div className="text-sm sm:text-[15px] font-bold text-[#136a3e] whitespace-nowrap">
-              Compliant. Transparent. Trade Ready.
+              {t.certTrustTagline}
             </div>
 
             {/* Divider (Desktop) */}
@@ -241,8 +251,7 @@ export default function Certifications() {
 
             {/* Description */}
             <div className="text-xs sm:text-[13.5px] text-[#475569] leading-relaxed">
-              Our certifications and registrations help us maintain quality, build trust and
-              deliver value to our global buyers.
+              {t.certTrustDesc}
             </div>
           </div>
         </motion.div>
@@ -255,7 +264,7 @@ export default function Certifications() {
 
         <Image
           src="/images/certifications/port-waterline.jpg"
-          alt="Container Port and Shipping Logistics"
+          alt={t.certPortBannerAlt}
           fill
           priority
           sizes="100vw"
